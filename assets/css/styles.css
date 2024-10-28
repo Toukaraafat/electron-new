@@ -19,8 +19,14 @@
         src: url(../fonts/tabler-icons/fonts/tabler-icons.svg#tabler-icons) format("svg")
     }
 }
-body{
+
+body {
     direction: rtl;
+}
+.logo{
+    width: 100%;
+    height: 75px;
+    object-fit: cover;
 }
 .ti {
     font-family: tabler-icons !important;
@@ -25238,12 +25244,12 @@ fieldset:disabled .btn {
 }
 
 .breadcrumb-item+.breadcrumb-item {
-    padding-left: var(--bs-breadcrumb-item-padding-x)
+    padding-right: var(--bs-breadcrumb-item-padding-x)
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
-    float: left;
-    padding-right: var(--bs-breadcrumb-item-padding-x);
+    float: right;
+    padding-left: var(--bs-breadcrumb-item-padding-x);
     color: var(--bs-breadcrumb-divider-color);
     content: var(--bs-breadcrumb-divider, "•")
 }
@@ -26242,7 +26248,7 @@ fieldset:disabled .btn {
 
 .modal-header .btn-close {
     padding: calc(var(--bs-modal-header-padding-y) * .5) calc(var(--bs-modal-header-padding-x) * .5);
-    margin: calc(-.5 * var(--bs-modal-header-padding-y)) calc(-.5 * var(--bs-modal-header-padding-x)) calc(-.5 * var(--bs-modal-header-padding-y)) auto
+    margin: calc(-.5 * var(--bs-modal-header-padding-y)) auto calc(-.5 * var(--bs-modal-header-padding-y)) calc(-.5 * var(--bs-modal-header-padding-x))
 }
 
 .modal-title {
@@ -41013,159 +41019,159 @@ html[data-layout=horizontal] .body-wrapper>.container-xxl {
         display: flex;
         width: 100%;
         margin: 0;
-        gap: 3px;
+        gap: 7px;
         justify-content: start;
         direction: rtl;
     }
-    }
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item {
-        border-bottom: 0
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item {
+    border-bottom: 0
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:last-child {
-        margin-right: 0
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:last-child {
+    margin-right: 0
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.sidebar-link {
-        margin: 0;
-        padding: 0 28px 0 7px;
-        min-height: 45px;
-        line-height: normal
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.sidebar-link {
+    margin: 0;
+    padding: 0 7px 0 28px;
+    min-height: 45px;
+    line-height: normal
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.sidebar-link .ti {
-        font-size: 16px
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.sidebar-link .ti {
+    font-size: 16px
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.sidebar-link.has-arrow {
-        padding-left: 30px !important
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.sidebar-link.has-arrow {
+    padding-left: 30px !important
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item {
-        position: relative;
-        width: auto;
-        margin-bottom: 0;
-        min-height: 65px
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item {
+    position: relative;
+    width: auto;
+    margin-bottom: 0;
+    min-height: 65px
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level {
-        padding: 7px 0 15px;
-        border-radius: 10px;
-        animation: menuDropdownShow .3s ease-in-out;
-        transition: background-color .3s
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level {
+    padding: 7px 0 15px;
+    border-radius: 10px;
+    animation: menuDropdownShow .3s ease-in-out;
+    transition: background-color .3s
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item>.sidebar-link .sidebar-icon,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item>.sidebar-link .sidebar-icon {
-        margin-right: 0;
-        margin-left: 0;
-        flex-shrink: 0
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item>.sidebar-link .sidebar-icon,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item>.sidebar-link .sidebar-icon {
+    margin-right: 0;
+    margin-left: 0;
+    flex-shrink: 0
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item {
-        padding: 8px 15px;
-        position: relative
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item {
+    padding: 8px 15px;
+    position: relative
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item .sidebar-link,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item .sidebar-link {
-        font-size: 14px;
-        gap: 10px
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item .sidebar-link,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item .sidebar-link {
+    font-size: 14px;
+    gap: 10px
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item .sidebar-link:hover,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item .sidebar-link:hover {
-        background-color: rgba(var(--bs-primary), .1);
-        color: var(--bs-primary)
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item .sidebar-link:hover,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item .sidebar-link:hover {
+    background-color: rgba(var(--bs-primary), .1);
+    color: var(--bs-primary)
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item .sidebar-link .ti,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item .sidebar-link .ti {
-        font-size: 16px
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item .sidebar-link .ti,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item .sidebar-link .ti {
+    font-size: 16px
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item:last-child,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item:last-child {
-        margin-bottom: 0
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .sidebar-item:last-child,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .second-level .sidebar-item:last-child {
+    margin-bottom: 0
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.has-arrow:after {
-        transform: rotate(-135deg) translate(0, -50%);
-        left: 9px;
-        top: 21px
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.has-arrow:after {
+    transform: rotate(-135deg) translate(0, -50%);
+    left: 9px;
+    top: 21px
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:last-child>.first-level {
-        right: 0;
-        left: auto
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:last-child>.first-level {
+    right: 0;
+    left: auto
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.two-column+.first-level {
-        width: 400px
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.two-column+.first-level {
+    width: 400px
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.two-column+.first-level>.sidebar-item {
-        float: left;
-        vertical-align: top;
-        width: 50%
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.two-column+.first-level>.sidebar-item {
+    float: left;
+    vertical-align: top;
+    width: 50%
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item ul {
-        position: absolute;
-        right: 0;
-        top: calc(65px - 10px);
-        width: 240px;
-        padding-bottom: 0;
-        display: none;
-        z-index: 100;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, .12);
-        background: var(--bs-body-bg);
-        transition: cubic-bezier(.075, .82, .165, 1)
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item ul {
+    position: absolute;
+    right: 0;
+    top: calc(65px - 10px);
+    width: 240px;
+    padding-bottom: 0;
+    display: none;
+    z-index: 100;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .12);
+    background: var(--bs-body-bg);
+    transition: cubic-bezier(.075, .82, .165, 1)
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.mega-dropdown {
-        position: static
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.mega-dropdown {
+    position: static
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.mega-dropdown .first-level {
-        width: 100%
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.mega-dropdown .first-level {
+    width: 100%
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.mega-dropdown .first-level>li {
-        width: 25%;
-        float: left
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.mega-dropdown .first-level>li {
+    width: 25%;
+    float: left
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:hover ul.first-level,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:hover ul.first-level.collapse {
-        display: block
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:hover ul.first-level,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:hover ul.first-level.collapse {
+    display: block
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item ul.second-level {
-        left: 240px;
-        top: 0
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item ul.second-level {
+    left: 240px;
+    top: 0
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .right-side-dd ul.second-level,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:last-child>.first-level ul.second-level {
-        right: 240px;
-        top: 0;
-        left: auto
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item .first-level .right-side-dd ul.second-level,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:last-child>.first-level ul.second-level {
+    right: 240px;
+    top: 0;
+    left: auto
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav ul.first-level>.sidebar-item:hover ul.second-level {
-        display: block
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav ul.first-level>.sidebar-item:hover ul.second-level {
+    display: block
+}
 
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav .badge,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav .nav-small-cap,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav .sidebar-footer,
-    html[data-layout=horizontal] .sidebar-nav #sidebarnav .user-pro {
-        display: none
-    }
+html[data-layout=horizontal] .sidebar-nav #sidebarnav .badge,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav .nav-small-cap,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav .sidebar-footer,
+html[data-layout=horizontal] .sidebar-nav #sidebarnav .user-pro {
+    display: none
+}
 
 
 @media (max-width:1299.98px) {
