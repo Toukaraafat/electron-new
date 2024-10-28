@@ -19845,6 +19845,7 @@ button {
     -webkit-appearance: button
 }
 
+
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
@@ -23171,7 +23172,7 @@ textarea.form-control.is-invalid {
     z-index: 4
 }
 
-.btn {
+.btn, .btn-filter {
     --bs-btn-padding-x: 27px;
     --bs-btn-padding-y: 9px;
     --bs-btn-font-size: 0.9375rem;
@@ -25251,7 +25252,7 @@ fieldset:disabled .btn {
     float: right;
     padding-left: var(--bs-breadcrumb-item-padding-x);
     color: var(--bs-breadcrumb-divider-color);
-    content: var(--bs-breadcrumb-divider, "•")
+    content: var(--bs-breadcrumb-divider, "/")
 }
 
 .breadcrumb-item.active {
@@ -40104,7 +40105,7 @@ html[data-boxed-layout=boxed] .container-xxl {
     position: relative;
     margin: 5px 0;
     padding: 5px 0;
-    font-size: 15px;
+    font-size: 13px;
     text-decoration: none
 }
 
@@ -41035,7 +41036,7 @@ html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item:last-child {
 
 html[data-layout=horizontal] .sidebar-nav #sidebarnav>.sidebar-item>.sidebar-link {
     margin: 0;
-    /* padding: 0 7px 0 28px; */
+    padding: 0 7px 0 28px;
     min-height: 45px;
     line-height: normal
 }
@@ -53414,3 +53415,9 @@ body .ui-state-highlight {
 body .connect-sorting-content {
     min-height: 60px
 }
+.btn{
+    width: 12rem;
+  }
+  .btn-filter{
+    width: 18rem;
+  }
