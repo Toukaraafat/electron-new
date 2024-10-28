@@ -23,11 +23,13 @@
 body {
     direction: rtl;
 }
-.logo{
+
+.logo {
     width: 100%;
     height: 75px;
     object-fit: cover;
 }
+
 .ti {
     font-family: tabler-icons !important;
     speak: none;
@@ -23172,7 +23174,8 @@ textarea.form-control.is-invalid {
     z-index: 4
 }
 
-.btn, .btn-filter {
+.btn,
+.btn-filter {
     --bs-btn-padding-x: 27px;
     --bs-btn-padding-y: 9px;
     --bs-btn-font-size: 0.9375rem;
@@ -53415,11 +53418,14 @@ body .ui-state-highlight {
 body .connect-sorting-content {
     min-height: 60px
 }
-.btn{
-    width: 12rem;
-  }
-  .btn-filter{
+
+.btn {
+    width: auto;
+}
+
+.btn-filter {
     width: 18rem;
+<<<<<<< HEAD
   }
   .text-gray{
     color:#a7acb2;
@@ -53475,4 +53481,6 @@ body .connect-sorting-content {
     cursor: pointer;
     font-size: 30px;
     color: blue;
+=======
+>>>>>>> 2d8b26a3f642995e94e676d3383d217460b560f4
 }
