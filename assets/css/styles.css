@@ -40525,8 +40525,8 @@ html[data-boxed-layout=boxed] .container-xxl {
 }
 
 .topbar .navbar .navbar-nav .nav-item.dropdown .dropdown-menu-end {
-    right: 0;
-    left: auto;
+    left: 0;
+    right: auto;
     top: 100%
 }
 
