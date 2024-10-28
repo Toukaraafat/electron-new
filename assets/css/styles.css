@@ -19845,6 +19845,9 @@ button {
     -webkit-appearance: button
 }
 
+.btn{
+    width: 10rem;
+}
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
