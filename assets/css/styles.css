@@ -53442,3 +53442,7 @@ body .connect-sorting-content {
   .hidden {
     display: none;
 }
+.form-control::placeholder{
+    font-size: 0.8rem; 
+    color: gray;
+}
