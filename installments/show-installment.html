@@ -12,7 +12,6 @@
 
   <!-- Core Css -->
   <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="stylesheet" href="/electron-new/assets/js/styles.js" />
 <!-- font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2897,8 +2896,17 @@
           </header>
           <!--  Header End -->
 
-   
-            <!-- <div class="px-3">
+
+
+
+
+
+
+
+          
+          <div class="mb-3 overflow-hidden position-relative">
+            <div class="px-3">
+              <!-- <h4 class="fs-6 mb-0">المناطق</h4> -->
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
                   <li class="breadcrumb-item">
@@ -2909,693 +2917,404 @@
                 </ol>
               </nav>
             </div>
-          </div> -->
+          </div>
           
           <div class="card">
             <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
-              <h4 class="card-title mb-0">  سلة المنتجات</h4>
+              <h4 class="card-title mb-0"> نظام الاقساط</h4>
             </div>
            
       </div>
-    
-    <div class="card ">
-        <div class="card-body">
-
-          <div class="d-flex justify-content-between mt-3">
-           <div class="d-flex ">
-            <label class="block mx-3 mt-3">
-              <input class="mx-2 " type="radio" name="inputType" value="barcode" onclick="toggleInput('barcode')" />
-              الباركود
-          </label>
-          <label class="block mt-3 mx-3">
-              <input class="mx-2" type="radio" name="inputType" value="serial" onclick="toggleInput('serial')" />
-              السريال نمبر
-          </label>
-           </div>
-            <button
-                class="btn mx-1 mt-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
-                اضافة 
-            </button>
-        </div>
-        
-        <div id="barcodeInput" class="hidden mx-3">
-            <label class="d-block w-100 mx-1">
-                الباركود
-                <input
-                    class="form-input w-100 rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary"
-                    placeholder="الباركود" type="text" />
-            </label>
-        </div>
-        
-        <div id="serialInput" class="hidden mx-3">
-            <label class="d-block w-100 mx-1">
-                السريال نمبر
-                <input
-                    class="form-input w-100 rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary"
-                    placeholder="السريال نمبر" type="text" />
-            </label>
-        </div>
-    </div></div>
-    <div class="card">
-     
-      <div class="card-body">
-        <div class="table-responsive pb-4">
-          <table id="all-student" class="table table-bordered border text-nowrap align-middle">
-            <thead>
-              <!-- start row -->
-              <tr>
-                <th>الصنف</th>
-                <th>الباركود  </th>
-                <th>السريال </th>
-                <th>العدد</th>
-                <th>التكلفة </th>
-                <th>البنك</th>
-                <th>السعر </th>
-                <th> حذف </th>
-              </tr>
-              <!-- end row -->
-            </thead>
-            <tbody>
-              <!-- start row -->
-              <tr>
-                <td>
-                  الاجمالي
-                </td>
-                <td> </td>
-                <td></td>
-                <td>123 9988568</td>
-                <td>2</td>
-                <td>
-                  1232212
-                </td>
-                <td>
-                  1232212
-                </td>
-                <td>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    
-    <div class="card">
-     
-      <div class="card-body">
-        <div class="row pt-2">
-          <div class="col-md-3">
-            <div class="">
-              <label class="form-label">مبلغ الموافقة </label>
-              <input type="text" id="firstName" class="form-control" />
-             
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="">
-              <label class="form-label">تكلفة البضاعة </label>
-              <input type="text" id="firstName" class="form-control" />
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="">
-              <label class="form-label">المقدم </label>
-              <input type="text" id="firstName" class="form-control" />
-            </div>
-          </div>
-          <!--/span-->
-          <div class="col-md-3">
-            <div class=" ">
-              <label class="form-label">المقدم الاضافي </label>
-              <input type="text" id="lastName" class="form-control " />
-           
-            </div>
-          </div>
-          <!--/span-->
-        </div>
-        <div class="row pt-2">
-          <div class="col-md-3">
-            <div class="">
-              <label class="form-label"> عدد الاقساط </label>
-              <input type="text" id="firstName" class="form-control" />
-             
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="">
-              <label class="form-label"> المبلغ المقسط </label>
-              <input type="text" id="firstName" class="form-control" />
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="">
-              <label class="form-label">اجمالي المقدم </label>
-              <input type="text" id="firstName" class="form-control" />
-            </div>
-          </div>
-          <!--/span-->
-          <div class="col-md-3">
-            <div class=" ">
-              <label class="form-label"> بداية المقدم </label>
-              <input type="text" id="lastName" class="form-control " />
-           
-            </div>
-          </div>
-          <!--/span-->
-        </div>
-
-        <div class="row pt-2">
-          <div class="col-md-3">
-            <div class="">
-              <label class="form-label"> القسط الشهري </label>
-              <input type="text" id="firstName" class="form-control" />
-             
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="">
-              <label class="form-label"> قسط السينت </label>
-              <input type="text" id="firstName" class="form-control" />
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="">
-              <label class="form-label">القسط الداخلي </label>
-              <input type="text" id="firstName" class="form-control" />
-            </div>
-          </div>
-          <!--/span-->
-          <div class="col-md-3">
-            <div class=" ">
-              <label class="form-label"> بداية اول قسط </label>
-              <input type="text" id="lastName" class="form-control " />
-           
-            </div>
-          </div>
-          <!--/span-->
-        </div>
-         <div class="row pt-2">
-          <div class="col-md-6">
-            <div class="">
-              <label class="form-label"> دفع المقدم </label>
-              <input type="text" id="firstName" class="form-control" />
-             
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="">
-              <label class="form-label"> مبلغ اقرار الدين </label>
-              <input type="text" id="firstName" class="form-control" />
-            </div>
-          </div>
-         
-          <!--/span-->
-        </div>
-        <div class="row pt-3">
-          <div class="col-md-12">
-            <div class="mb-3">
-              <label class="form-label">  الملاحظات </label>
-              <input type="text" id="firstName" class="form-control" />
-             
-            </div>
-          </div>
-          </div>
-          <div class="row pt-3">
-            <div class="col-md-12 d-flex justify-content-end ">
-          <a class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 " href="./installment-archive.html">
-            طباعة اقرار الدين </a>
-            <a class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 " href="./installment-archive.html">
-              طباعة نموذج للموثق </a> </div></div>
-
-         
-          <!--/span-->
-        </div>
-      </div>
-
-
       <div class="card">
-     
         <div class="card-body">
-          <div class="row pt-3">
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">  الاسم </label>
-                <input type="text" id="firstName" class="form-control" />
-               
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">  الرقم المدني </label>
-                <input type="text" id="firstName" class="form-control" />
-               
-              </div>
-            </div>
-            </div>
-          <div class="row pt-2">
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> الاسم الاول (العربيه) <span class="text-danger"> * </span> </label>
-                <input type="text" id="firstName" class="form-control" />
-               
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> الاسم الثاني (العربيه)   <span class="text-danger"> * </span></label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">الاسم الثالث (العربيه)  <span class="text-danger"> * </span></label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <!--/span-->
-            <div class="col-md-3">
-              <div class=" ">
-                <label class="form-label"> الاسم الرابع (العربيه) </label>
-                <input type="text" id="lastName" class="form-control " />
-             
-              </div>
-            </div>
-            <!--/span-->
-          </div>
-          <div class="row pt-2">
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  الاسم الخامس (العربيه) </label>
-                <input type="text" id="firstName" class="form-control" />
-               
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  الاسم الاول (الانجليزية)   <span class="text-danger"> * </span></label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> الاسم الثاني (الانجليزية)   <span class="text-danger"> * </span></label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <!--/span-->
-            <div class="col-md-3">
-              <div class=" ">
-                <label class="form-label">  الاسم الثالث (الانجليزية)    <span class="text-danger"> * </span></label>
-                <input type="text" id="lastName" class="form-control " />
-             
-              </div>
-            </div>
-            <!--/span-->
-          </div>
-  
-          <div class="row pt-2">
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> 
-                  الاسم الرابع (الانجليزية) </label>
-                <input type="text" id="firstName" class="form-control" />
-               
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> الاسم الخامس (الانجليزية)  </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">النوع  </label>
-                <select class="form-select" data-placeholder="Choose a Category" tabindex="1" >
-                  <option value="" selected disabled></option>
-                  <option value="Category 2">Category 2</option>
-                  <option value="Category 3">Category 5</option>
-                  <option value="Category 4">Category 4</option>
-                </select>
-              </div>
-            </div>
-            <!--/span-->
-            <div class="col-md-3">
-              <div class=" ">
-                <label class="form-label">   الجنسية </label>
-                <input type="text" id="lastName" class="form-control " />
-             
-              </div>
-            </div>
-            <!--/span-->
-          </div>
-           <div class="row pt-2">
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  الهاتف </label>
-                <input type="text" id="firstName" class="form-control" />
-               
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> هاتف العمل </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> اسم اقرب شخص (1)  </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> هاتف اقرب شخص (1)  </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-           
-            <!--/span-->
-          </div>
-          <div class="row pt-2">
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  اسم اقرب شخص (2) </label>
-                <input type="text" id="firstName" class="form-control" />
-               
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> هاتف اقرب شخص (2)  </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">    
-                  هاتف اقرب شخص
-                 المنطقة  </label>
-                 <select class="form-select" data-placeholder="Choose a Category" tabindex="1" >
-                  <option value="" selected disabled></option>
-                  <option value="Category 2">Category 2</option>
-                  <option value="Category 3">Category 5</option>
-                  <option value="Category 4">Category 4</option>
-                </select>              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> القطعة </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-           
-            <!--/span-->
-          </div>
-          
-          <div class="row pt-2">
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  شارع  </label>
-                <input type="text" id="firstName" class="form-control" />
-               
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> جادة  </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  مبني </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">الدور</label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-           
-            <!--/span-->
-          </div>
-
-          <div class="row pt-2">
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  رقم الشقه  </label>
-                <input type="text" id="firstName" class="form-control" />
-               
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> رقم الالي  <span class="text-danger"> * </span></label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  جهه العمل </label>
-                <select class="form-select" data-placeholder="Choose a Category" tabindex="1" >
-                  <option value="" selected disabled></option>
-                  <option value="Category 2">Category 2</option>
-                  <option value="Category 3">Category 5</option>
-                  <option value="Category 4">Category 4</option>
-                </select>  
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">الراتب</label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-           
-            <!--/span-->
-          </div>
-          <div class="row pt-2">
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  اسم البنك  </label>
-                <select class="form-select" data-placeholder="Choose a Category" tabindex="1" >
-                  <option value="" selected disabled></option>
-                  <option value="Category 2">Category 2</option>
-                  <option value="Category 3">Category 5</option>
-                  <option value="Category 4">Category 4</option>
-                </select>  
-               
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label"> رقم الحساب البنكي  </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">  عنوان العمل </label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="">
-                <label class="form-label">موقع كويك فيندر <span class="text-danger"> * </span></label>
-                <input type="text" id="firstName" class="form-control" />
-              </div>
-            </div>
-           
-            <!--/span-->
-          </div>
-          <div class="row pt-2">
-            <div class="col-md-12">
-              <div class="">
-                <label class="form-label">  البريد الالكترونى  <span class="text-danger"> * </span> </label>
-                <input type="text" id="firstName" class="form-control" /> 
-               
-              </div>
-            </div>
-          </div>
-          <div class="row pt-2">
-            <div class="col-md-12">
-              <div class="">
-                <label class="form-label">  صورة شهادة الراتب   <span class="text-danger"> * </span> </label>
-               <div class="py-3 border-1 w-100">
-                <img class="w-100 " src="../images/100x100.png" alt="" height="70px" width="70px"> 
-               </div>
-               
-              </div>
-            </div>
-          </div>
-          <div class="row pt-2">
-            <div class="col-md-12">
-              <div class="form-check d-flex">
-                <input class="form-check-input" type="checkbox" id="exampleCheckbox">
-                <label class="form-check-label mx-5" for="exampleCheckbox">
-                  التحقق من هويتي <span class="text-danger"> * </span>
-                </label>
-            </div>
-    
-        </div>
-      </div>
-           
-  
-           
-            <!--/span-->
-          </div>
-        </div>
-      
-    
-
-    <div class="card">
-      <div class="card-body">
-          <div class="table-responsive">
-              <div class="accordion accordion-flush" id="accordionFlushExample">
-                  <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              <i class="ti ti-user-check fs-6 d-block mx-1" style="color: rgb(1, 122, 58);"></i>  البيانات الشخصية  <span class="text-gray mx-1">( قم بالضغط هنا لاظهار البيانات العميل)</span>
-                          </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">
-                              <div class="table-responsive pb-4">
-                                  <table class="table">
-                                      <tbody>
-                                          <tr><th>الاسم</th><td>تقي</td></tr>
-                                          <tr><th>الهاتف</th><td>266043000658</td></tr>
-                                          <tr><th>المقدم الاساسي</th><td>55583614</td></tr>
-                                          <tr><th>المقدم الاضافي</th><td>55583614</td></tr>
-                                          <tr><th>اجمالي المقدم</th><td>55583614</td></tr>
-                                          <tr><th>المبالغ المدفوعة</th><td>55583614</td></tr>
-                                          <tr><th>المبلغ الاجمالي</th><td>55583614</td></tr>
-                                          <tr><th>المتبقي</th><td>55583614</td></tr>
-                                          <tr><th>مبلغ اقرار الدين</th><td>55583614</td></tr>
-                                          <tr><th>عدد الاقساط</th><td>1</td></tr>
-                                          <tr><th>عدد الاقساط المتأخرة</th><td>1</td></tr>
-                                          <tr><th>عدد الاقساط المدفوعة</th><td>1</td></tr>
-                                          <tr><th>قيمة الخصم</th><td>1</td></tr>
-                                          <tr><th>عدد الاقساط المستحقة</th><td>1</td></tr>
-                                          <tr><th>القسط الشهري</th><td>1</td></tr>
-                                          <tr><th>القسط الداخلي</th><td>1</td></tr>
-                                          <tr><th>قسط الساينت</th><td>1</td></tr>
-                                          <tr><th>بنك العميل</th><td>1</td></tr>
-                                          <tr><th>كويت فايندر</th><td>1</td></tr>
-                                          <tr><th>جهة العمل (2)</th><td>1</td></tr>
-                                          <tr><th>رقم الحساب (5)</th><td>1</td></tr>
-                                          <tr><th>بنك العميل</th><td>1</td></tr>
-                                          <tr><th>العنوان</th><td>1</td></tr>
-                                          <tr><th>الراتب</th><td>ِ<a href="" class="text-success"> عرض ملف الساينت</a></td></tr>
-                                          <tr><th>بنك الاستقطاع</th>
-                                            <td> <div class="row pt-2">
-                                              <div class="col-md-3">
-                                                <div class="">
-                                                  <label class="form-label">  السنة  <span class="text-danger"> * </span> </label>
-                                                  <input type="text" id="firstName" class="form-control" />
-                                                </div>
-                                              </div>
-                                              <div class="col-md-3">
-                                                <div class="">
-                                                  <label class="form-label">   مكتب التوثيق <span class="text-danger"> * </span> </label>
-                                                  <input type="text" id="firstName" class="form-control" />
-                                                </div>
-                                              </div>
-                                              <div class="col-md-3">
-                                                <div class="">
-                                                  <label class="form-label">   رقم المرجع  <span class="text-danger"> * </span></label>
-                                                  <input type="text" id="firstName" class="form-control" />
-                                                </div>
-                                              </div>
-                                              <div class="col-md-3">
-                                                <div class="">
-                                                  <label class="form-label"> اضف ملف   <span class="text-danger"> * </span></label>
-                                                  <input type="file" id="firstName" class="form-control" />
-                                                </div>
-                                              </div>
-                                             
-                                              <!--/span-->
-                                            </div>
-                                            </td></tr>
-                                      </tbody>
-                                  </table>
-                                  <div class="d-flex justify-content-end">
-                                    <a class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 " href="./installment-archive.html">
-                                      الاعتماد و رفع العقود </a>
-                                  </div> 
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <div class="card">
-    <div class="card-body">
-        <div class="table-responsive">
-            <div class="accordion accordion-flush" id="accordionFlushExampleNotes">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            <i class="ti ti-message-2 fs-6 d-block mx-1" style="color: blueviolet;"></i> ملفات الساينت <span class="text-gray mx-1">( قم بالضغط هنا لاظهار  ملف الساينت)</span>
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExampleNotes">
-                        <div class="accordion-body">
-                              <div class="table-responsive pb-4">
-                                <table id="all-student" class="table table-bordered border text-nowrap align-middle">
-                                  <thead>
-                                    <!-- start row -->
-                                    <tr>
-                                      <th> # </th>
-                                      <th>الجهة </th>
-                                      <th> 	تاريخ فتح حساب </th>
-                                      <th>	الرصيد المتبقي</th>
-                                      <th> قيمة القسط</th>
-                                      <th>	قيمة المديونية </th>
-                                      <th> 	  فتره السداد </th>
-                                      <th>		مبلغ القرض </th>
-                                      <th> 	إعادة الجدولة </th>
-                                     
-                                    </tr>
-                                    <!-- end row -->
-                                  </thead>
-                                  <tbody>
-                                    <!-- start row -->
-                                    <tr>
-                                      <td>
-                                        احمد
-                                      </td>
-                                      <td>25/05/2012 </td>
-                                      <td>12</td>
-                                      <td>123 9988568</td>
-                                      <td>2</td>
-                                      <td>25/05/2012 </td>
-                                      <td>12</td>
-                                      <td>123 9988568</td>
-                                      <td>2</td>
-                                    
-                                    </tr>
-                  
-                                  </tbody>
-                                </table>
-                              </div>
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <i class="ti ti-user-check fs-6 d-block mx-1" style="color: rgb(1, 122, 58);"></i> بيانات العميل <span class="text-gray mx-1">( قم بالضغط هنا لاظهار البيانات العميل)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="table-responsive pb-4">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr><th>الاسم</th><td>تقي</td></tr>
+                                            <tr><th>الهاتف</th><td>266043000658</td></tr>
+                                            <tr><th>المقدم الاساسي</th><td>55583614</td></tr>
+                                            <tr><th>المقدم الاضافي</th><td>55583614</td></tr>
+                                            <tr><th>اجمالي المقدم</th><td>55583614</td></tr>
+                                            <tr><th>المبالغ المدفوعة</th><td>55583614</td></tr>
+                                            <tr><th>المبلغ الاجمالي</th><td>55583614</td></tr>
+                                            <tr><th>المتبقي</th><td>55583614</td></tr>
+                                            <tr><th>مبلغ اقرار الدين</th><td>55583614</td></tr>
+                                            <tr><th>عدد الاقساط</th><td>1</td></tr>
+                                            <tr><th>عدد الاقساط المتأخرة</th><td>1</td></tr>
+                                            <tr><th>عدد الاقساط المدفوعة</th><td>1</td></tr>
+                                            <tr><th>قيمة الخصم</th><td>1</td></tr>
+                                            <tr><th>عدد الاقساط المستحقة</th><td>1</td></tr>
+                                            <tr><th>القسط الشهري</th><td>1</td></tr>
+                                            <tr><th>القسط الداخلي</th><td>1</td></tr>
+                                            <tr><th>قسط الساينت</th><td>1</td></tr>
+                                            <tr><th>بنك العميل</th><td>1</td></tr>
+                                            <tr><th>كويت فايندر</th><td>1</td></tr>
+                                            <tr><th>جهة العمل (2)</th><td>1</td></tr>
+                                            <tr><th>رقم الحساب (5)</th><td>1</td></tr>
+                                            <tr><th>بنك العميل</th><td>1</td></tr>
+                                            <tr><th>العنوان</th><td>1</td></tr>
+                                            <tr><th>الراتب</th><td>1</td></tr>
+                                            <tr><th>بنك الاستقطاع</th><td><button type="button" class="btn btn-primary">طباعة</button></td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleNotes">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <i class="ti ti-message-2 fs-6 d-block mx-1" style="color: blueviolet;"></i> الملاحظات <span class="text-gray mx-1">( قم بالضغط هنا لاظهار  الملاحظات)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExampleNotes">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-wrap mb-1">
+                                    <a class=" btn-filter me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2 ">
+كل الملاحظات                                    </a>
+                                    <a class="btn-filter bg-info-subtle text-info  px-4 fs-4 mx-1 mb-2">
+ملاحظات التقديم                                    </a>
+                                    <a class="btn-filter bg-warning-subtle text-warning px-4 fs-4 mx-1 mb-2">
+ملاحظات اقبول                                    </a>
+                                    <a class="btn-filter  bg-success-subtle text-success px-4 fs-4 mx-1 mb-2">
+SMS                                    </a>
+                                    <a class="btn-filter  bg-success-subtle text-success px-4 fs-4 mx-1 mb-2">
+السيارات                                    </a>
+                        
+                                    <a class="btn-filter bg-danger-subtle text-danger px-4 fs-4 mx-1 mb-2">
+                        
+القضايا                                    </a>
+                                    <a class="btn-filter px-4 bg-primary-subtle text-primaryfs-4 mx-1 mb-2">
+قضايا التنفيذ                                    </a>
+                                    <a class="btn-filter bg-danger-subtle text-danger px-4 fs-4 mx-1 mb-2">
+التدقيق                                    </a>
+                                    <a class="btn-filter me-1 mb-1  bg-warning-subtle text-warning  px-4 fs-4 mx-1 mb-2 ">
+الشئون القانونية                                    </a>
+                                  </div>
+                                  <div class="table-responsive pb-4">
+                                    <table id="all-student" class="table table-bordered border text-nowrap align-middle">
+                                      <thead>
+                                        <!-- start row -->
+                                        <tr>
+                                          <th> اليوزر </th>
+                                          <th>الاتصال </th>
+                                          <th> الساعة </th>
+                                          <th>التاريخ</th>
+                                          <th> الملاحظة</th>
+                                         
+                                        </tr>
+                                        <!-- end row -->
+                                      </thead>
+                                      <tbody>
+                                        <!-- start row -->
+                                        <tr>
+                                          <td>
+                                            احمد
+                                          </td>
+                                          <td>25/05/2012 </td>
+                                          <td>12</td>
+                                          <td>123 9988568</td>
+                                          <td>2</td>
+                                        
+                                        </tr>
+                      
+                                      </tbody>
+                                    </table>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleTransaction">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <i class="ti ti-ad-2 fs-6 mx-1" style="color: rgb(245, 105, 18);"></i> تتبع المعاملة <span class="text-gray mx-1">( قم بالضغط هنا لاظهار تتبع المعاملة)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExampleTransaction">
+                            <div class="accordion-body">
+                                <div class="table-responsive pb-4">
+                                    <table id="all-student" class="table table-bordered border text-nowrap align-middle">
+                                      <thead>
+                                        <!-- start row -->
+                                        <tr>
+                                          <th> القسم </th>
+                                          <th>المسؤل </th>
+                                          <th> تاريخ البدأ </th>
+                                          <th>تاريخ الانتهاء </th>
+                                          <th> عدد الايام</th>
+                                          <th> عدد اجمالي الايام</th>
+                                        </tr>
+                                        <!-- end row -->
+                                      </thead>
+                                      <tbody>
+                                        <!-- start row -->
+                                        <tr>
+                                          <td>
+                                            احمد
+                                          </td>
+                                          <td>25/05/2012 </td>
+                                          <td>12</td>
+                                          <td>123 9988568</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                        </tr>
+                      
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleItems">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                <i class="ti ti-sort-descending-2 fs-6 mx-1" style="color: rgb(245, 18, 18);"></i> عدد الاصناف <span class="text-gray mx-1">( قم بالضغط هنا لاظهار  عدد الاصناف)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExampleItems">
+                            <div class="accordion-body">
+                                <div class="table-responsive pb-4">
+                                    <table id="all-student" class="table table-bordered border text-nowrap align-middle">
+                                      <thead>
+                                        <!-- start row -->
+                                        <tr>
+                                          <th> الماركة </th>
+                                          <th>الصنف </th>
+                                          <th>  الموديل </th>
+                                          <th>سعر البيع  </th>
+                                          <th>  سعر المعروض</th>
+                                          <th>   سعر تكلفة الوحدة</th>
+                                          <th>  العدد </th>
+                                          <th>  اجمالي التكلفة </th>
+                                        </tr>
+                                        <!-- end row -->
+                                      </thead>
+                                      <tbody>
+                                        <!-- start row -->
+                                        <tr>
+                                          <td>
+                                            احمد
+                                          </td>
+                                          <td>25/05/2012 </td>
+                                          <td>12</td>
+                                          <td>123 9988568</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                        </tr>
+                      
+                                      </tbody>
+                                    </table>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleFiles">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                <i class="ti ti-bookmark fs-6 mx-1" style="color: rgb(245, 234, 18);"></i> الملفات المرفوعة <span class="text-gray mx-1">( قم بالضغط هنا لاظهار  الملفات المرفوعة)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExampleFiles">
+                            <div class="accordion-body">
+                                <div class="scroll-container">
+                                    <div class="item" data-file="path/to/your/image1.jpg"><img src="../assets/images/sample-file-icon-2048x2048-11hv7b9w.png" alt="Image 1"></div>
+                                    <div class="item" data-file="path/to/your/image2.jpg"><img src="../assets/images/sample-file-icon-2048x2048-11hv7b9w.png" alt="Image 2"></div>
+                                    <div class="item" data-file="path/to/your/document1.pdf"><img src="../assets/images/sample-file-icon-2048x2048-11hv7b9w.png" alt="PDF 1"></div>
+                                    <div class="item" data-file="path/to/your/image1.jpg"><img src="../assets/images/sample-file-icon-2048x2048-11hv7b9w.png" alt="Image 1"></div>
+                                    <div class="item" data-file="path/to/your/image2.jpg"><img src="../assets/images/sample-file-icon-2048x2048-11hv7b9w.png" alt="Image 2"></div>
+                                    <div class="item" data-file="path/to/your/document1.pdf"><img src="../assets/images/sample-file-icon-2048x2048-11hv7b9w.png" alt="PDF 1"></div>
+                                     <div class="item" data-file="path/to/your/image1.jpg"><img src="../assets/images/sample-file-icon-2048x2048-11hv7b9w.png" alt="Image 1"></div>
+                                    <div class="item" data-file="path/to/your/image2.jpg"><img src="../assets/images/sample-file-icon-2048x2048-11hv7b9w.png" alt="Image 2"></div>
+                                    <div class="item" data-file="path/to/your/document1.pdf"><img src="../assets/images/sample-file-icon-2048x2048-11hv7b9w.png" alt="PDF 1"></div>
+                                </div>
+                            
+                                <div class="modal" id="modal">
+                                    <span class="close" id="close">&times;</span>
+                                    <iframe id="modal-content" src="" frameborder="0"></iframe>
+                                    <div class="modal-buttons d-flex ">
+                                        <div>
+                                            <button class="btn-primary mx-1 " id="print">طباعة</button>
+                                        </div>
+                                       <div>
+                                        <button class="btn-primary mx-1" id="download" href="" download>تحميل</button>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleAccount">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                <i class="ti ti-inbox fs-6 mx-1" style="color: rgb(18, 245, 226);"></i> كشف الحساب <span class="text-gray mx-1">( قم بالضغط هنا لاظهار  كشف الحساب)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExampleAccount">
+                            <div class="accordion-body">
+                                <div class="table-responsive pb-4">
+                                    <table id="all-student" class="table table-bordered border text-nowrap align-middle">
+                                      <thead>
+                                        <!-- start row -->
+                                        <tr>
+                                          <th> م </th>
+                                          <th>الرصيد </th>
+                                          <th>  الدائن </th>
+                                          <th> المدين  </th>
+                                          <th>   التاريخ</th>
+                                          <th>     طريقة الدفع</th>
+                                          <th>  صورة المستند </th>
+                                        </tr>
+                                        <!-- end row -->
+                                      </thead>
+                                      <tbody>
+                                        <!-- start row -->
+                                        <tr>
+                                          <td>
+                                            احمد
+                                          </td>
+                                          <td>25/05/2012 </td>
+                                          <td>12</td>
+                                          <td>123 9988568</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                        </tr>
+                      
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleInstallments">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                <i class="ti ti-basket fs-6 mx-1" style="color: rgb(245, 18, 226);"></i> الاقساط 
+                                <span class="text-gray mx-1">( قم بالضغط هنا لاظهار  الاقساط)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExampleInstallments">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-wrap ">
+                                    <a class=" btn-filter me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2 ">
+دفع المديونية مع الخصم                                    </a>
+                                    <a class="btn-filter bg-info-subtle text-info  px-4 fs-4 mx-1 mb-2">
+دفع كامل المديونية                                    </a>
+                                    <a class="btn-filter bg-warning-subtle text-warning px-4 fs-4 mx-1 mb-2">
+دفع جزأ                                    </a>
 
-</div>
+
+                                  </div>
+                                  <!-- <div class="mb-3 d-block">
+    <label for="exampleFormControlInput1" class="form-label mt-2 text-center ">نظام الاقساط </label>
+    <input type="email" class="form-control w-75 mt-2 mb-2 " id="exampleFormControlInput1">
+  </div> -->
+  <div class="table-responsive pb-4">
+    <table id="all-student" class="table table-bordered border text-nowrap align-middle">
+      <thead>
+        <!-- start row -->
+        <tr>
+          <th> م </th>
+          <th>تاريخ الاستحقاق </th>
+          <th>  المبلغ (دينار) </th>
+          <th> دفع يدوي  </th>
+          <th>   دفع رابط</th>
+          <th>     تاريخ الدفع</th>
+        </tr>
+        <!-- end row -->
+      </thead>
+      <tbody>
+        <!-- start row -->
+        <tr>
+          <td>
+            احمد
+          </td>
+          <td>25/05/2012 </td>
+          <td>12</td>
+          <td>123 9988568</td>
+          <td>2</td>
+          <td><h6>12</h6>
+        <h6><a  class="text-success">صوره الايصال</a></h6>
+    </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
       <script>
         function handleColorTheme(e) {
           document.documentElement.setAttribute("data-color-theme", e);
@@ -3770,7 +3489,6 @@
 
 
   </div>
-  <script src="../assets/js/styles.js"></script>
   <script src="../assets/js/vendor.min.js"></script>
   <!-- Import Js Files -->
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -3785,7 +3503,30 @@
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
   <script src="../assets/js/datatable/datatable.init.js"></script>
- 
+  <script>
+    document.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('click', () => {
+        const filePath = item.getAttribute('data-file');
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+        const downloadButton = document.getElementById('download');
+        
+        modal.style.display = 'flex';
+        modalContent.src = filePath;
+        downloadButton.href = filePath;
+    });
+});
+
+document.getElementById('close').addEventListener('click', () => {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('print').addEventListener('click', () => {
+    const modalContent = document.getElementById('modal-content');
+    modalContent.contentWindow.print();
+});
+
+  </script>
 </body>
 
 </html>

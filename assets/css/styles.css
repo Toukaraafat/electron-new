@@ -53427,4 +53427,10 @@ body .connect-sorting-content {
 
 .btn-filter {
     width: 18rem;
+  }
+  .text-gray{
+    color:#a7acb2;
+  }
+  .hidden {
+    display: none;
 }
