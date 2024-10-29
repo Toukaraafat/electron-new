@@ -2968,6 +2968,13 @@
           </div>
         </div>
       </div>
+      <div class="card mt-4 py-3" id="myCard" style="display: none;">
+        <div class="row pt-3 px-4">
+            <button class="btn-filter me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2" type="submit">
+                متــابعة
+            </button>
+        </div>
+    </div>
           <div class="card">
             
             <div class="card-body">
@@ -2976,14 +2983,19 @@
                   <thead>
                     <!-- start row -->
                     <tr>
-                      <th>رقم طلب الشراء</th>
-                      <th>اسم الشركة  </th>
-                      <th>  الموديل  </th>
-                      <th>  مكان التوريد  </th>
-                      <th>  القيمة الإجمالية  </th>
-                      <th>  	طباعة طلب الشراء   </th>
-                      <th>   تاريخ الإرسال  </th>
-                      <th>  الحالة   </th>
+                      <th>الماركة</th>
+                        <th>الصنف  </th>
+                        <th>  المواصفات  </th>
+                        <th>   الموديل  </th>
+                        <th>  الباركود  </th>
+                        <th>  عدد المتوفر  </th>
+                        <th>  الوكيل  </th>
+                        <th>  الغانم  </th>
+                        <th>  يوريكا  </th>
+                        <th>  العيار و العساكر  </th>
+                        <th>  سعر البيع  </th>
+                        <th>  سعر القبيلة  </th>
+                        <th>  اضافة  </th>
                       
                     </tr>
                     <!-- end row -->
@@ -2993,12 +3005,19 @@
                     <tr>
                       <td> 1</td>
                       <td>12</td>
+                      <td> 1</td>
+                      <td>12</td>
+                      <td> 1</td>
+                      <td>12</td>
+                      <td> 1</td>
                       <td> 11</td>
                       <td> 11</td>
                       <td> 11</td>
                       <td > <a href="" class="text-info">طباعة</a></td>
                       <td> 11</td>
-                      <td class="text-success"> فعال</td>
+                      <td>    <button class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2" type="button" onclick="toggleCard()">
+                        اضافة
+                    </button></td>
                     </tr>
   
                   </tbody>
@@ -3196,6 +3215,16 @@
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
   <script src="../assets/js/datatable/datatable.init.js"></script>
+  <script>
+    function toggleCard() {
+            const card = document.getElementById('myCard');
+            if (card.style.display === 'none' || card.style.display === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        }
+  </script>
 </body>
 
 </html>
