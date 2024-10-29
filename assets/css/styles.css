@@ -1239,6 +1239,14 @@ body {
 .ti-ballon-off:before {
     content: "\f0fd"
 }
+.dt-buttons{
+	
+    margin-bottom: 20px;
+
+}
+.dataTables_info{
+	 margin-bottom: 20px;
+}
 
 .ti-ballpen:before {
     content: "\f06e"
