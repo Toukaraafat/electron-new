@@ -1,21 +1,20 @@
-document.querySelectorAll('.item').forEach(item => {
-    item.addEventListener('click', () => {
-        const filePath = item.getAttribute('data-file');
-        const modal = document.getElementById('modal');
-        const modalContent = document.getElementById('modal-content');
-        const downloadButton = document.getElementById('download');
-        
-        modal.style.display = 'flex';
-        modalContent.src = filePath;
-        downloadButton.href = filePath;
-    });
-});
+function toggleInput(type) {
+    // Get the input divs
+    const barcodeInput = document.getElementById('barcodeInput');
+    const serialInput = document.getElementById('serialInput');
+    
+    // Show/hide based on the selected type
+    if (type === 'barcode') {
+        barcodeInput.classList.remove('hidden');
+        serialInput.classList.add('hidden');
+    } else if (type === 'serial') {
+        serialInput.classList.remove('hidden');
+        barcodeInput.classList.add('hidden');
+    }
+}
 
-document.getElementById('close').addEventListener('click', () => {
-    document.getElementById('modal').style.display = 'none';
-});
-
-document.getElementById('print').addEventListener('click', () => {
-    const modalContent = document.getElementById('modal-content');
-    modalContent.contentWindow.print();
-});
+// Optional: To hide both inputs on initial load
+window.onload = function() {
+    document.getElementById('barcodeInput').classList.add('hidden');
+    document.getElementById('serialInput').classList.add('hidden');
+};
