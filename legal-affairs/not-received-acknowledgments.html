@@ -2260,63 +2260,16 @@
                   <li class="breadcrumb-item">
                     <a href="..index.html">الرئيسية</a>
                   </li>
-                  <li class="breadcrumb-item">الإعدادات </li>
-                  <li class="breadcrumb-item" aria-current="page">المناطق</li>
+                  <li class="breadcrumb-item">الشئون القانونية</li>
+                  <li class="breadcrumb-item" aria-current="page">إقرارات غير مستلمة</li>
                 </ol>
               </nav>
             </div>
           </div>
+
           <div class="card">
             <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
-              <h4 class="card-title mb-0">المناطق</h4>
-              <button class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 " data-bs-toggle="modal"
-                data-bs-target="#bs-example-modal-md">
-                أضف منطقة </button>
-              <!-- sample modal content -->
-              <div id="bs-example-modal-md" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header d-flex align-items-center">
-                      <h4 class="modal-title" id="myModalLabel">
-                       أضف منطقة</h4>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="form-row">
-                          <div class="form-group">
-                            <label class="form-label" for="input1 "> الإسم بالعربية</label>
-                            <input type="text" class="form-control mb-2" id="input1">
-                          </div>
-                          <div class="form-group">
-                            <label class="form-label" for="input2 ">الإسم بالإنجليزية </label>
-                            <input type="text" class="form-control mb-2" id="input2">
-                          </div>
-                          <div class="form-group">
-                            <label class="form-label">المحافظة</label>
-                            <select class="form-select">
-                              <option>أختر المحافظة</option>
-                              <option>القاهرة</option>
-                              <option>الإسماعيلية</option>
-                              <option>الجيزة</option>
-                            </select>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer d-flex ">
-                      <button type="submit" class="btn btn-primary">حفظ</button>
-                      <button type="button" class="btn bg-danger-subtle text-danger  waves-effect"
-                        data-bs-dismiss="modal">
-                        الغاء
-                      </button>
-                    </div>
-                  </div>
-                  <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-              </div>
+              <h4 class="card-title mb-0">إقرارات غير مستلمة</h4>
             </div>
             <div class="card-body">
               <div class="table-responsive pb-4">
@@ -2325,43 +2278,108 @@
                     <!-- start row -->
                     <tr>
                       <th>#</th>
-                      <th> الإسم بالعربية </th>
-                      <th>الإسم بالإنجليزية</th>
-                      <th>المحافظات</th>
-                      <th> انشأ بواسطة</th>
-                      <th>الإجراءات</th>
-   
+                      <th>رقم المعاملة </th>
+                      <th>اسم العميل</th>
+                      <th> رقم الهاتف</th>
+                      <th>تاريخ البدء </th>
+                      <th> نوع الضمانات
+                      </th>
+                      <th>المبلغ </th>
+                      <th> فتح ملف </th>
+
                     </tr>
                     <!-- end row -->
                   </thead>
                   <tbody>
                     <!-- start row -->
-                    <tr>
+                    <tr data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                      aria-controls="collapseExample">
                       <td>
                         1
                       </td>
                       <td>
-                        تقى
-                      </td> 
-                                           <td>touka</td>
-                      <td>القاهرة</td>
-                      <td>
-                        تقى
+                        احمد
                       </td>
+                      <td>25/05/2012 </td>
+                      <td>12</td>
+                      <td>123 9988568</td>
+                      <td>2</td>
                       <td>
-                        <div class="action-btn">
-                          <a href="javascript:void(0)" class="text-primary edit">
-                            <i class="ti ti-pencil fs-5"></i>
-                          </a>
-                          <a href="javascript:void(0)" class="text-dark delete ms-2">
-                            <i class="ti ti-trash fs-5"></i>
-                          </a>
+                        1232212
+                      </td>
+
+                      <td>
+
+                        <button class="btn me-1 mb-1 btn-rounded btn-success px-4 fs-4 " data-bs-toggle="modal"
+                          data-bs-target="#open-file">
+                          تسليم إقرار دين </button>
+                        <!-- sample modal content -->
+                        <div id="open-file" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md"
+                          aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header d-flex align-items-center">
+                                <h4 class="modal-title" id="myModalLabel">
+                                  إضافة صورة الإعتماد
+                                </h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="d-flex justify-content-between ">
+                                  <h4>صقر محمد على العازمي ( 300020100046 )
+                                  </h4>
+                                  <button type="button" class="btn btn-outline-info">
+                                    نموذج إقرار الدين </button>
+                                </div>
+
+                                <form>
+                                  <div class="form-row">
+                                    <div class="form-group">
+                                      <label for="formFile" class="form-label">صورة نموذج استلام اقرار الدين</label>
+                                      <input class="form-control" type="file" id="formFile" />
+                                    </div>
+                                    <div class="form-group">
+                                      <div class="mb-3">
+                                        <label class="form-label">الملاحظات</label>
+                                        <textarea class="form-control" rows="5"></textarea>
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="form-label"> اختر الموظف</label>
+                                      <select class="form-select">
+                                        <option value="1">
+                                          تقى </option>
+                                        <option value="2">
+                                          حسن </option>
+                                        <option value="3">
+                                          احمد </option>
+
+                                      </select>
+                                    </div>
+
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer d-flex ">
+                                <button type="submit" class="btn btn-primary">تسليم إقرار الدين</button>
+                                <button type="button" class="btn bg-danger-subtle text-danger  waves-effect"
+                                  data-bs-dismiss="modal">
+                                  الغاء
+                                </button>
+                              </div>
+                            </div>
+                            <!-- /.modal-content -->
+                          </div>
+                          <!-- /.modal-dialog -->
                         </div>
                       </td>
-                    </tr>
 
+
+                    </tr>
                   </tbody>
                 </table>
+
               </div>
             </div>
           </div>
