@@ -2981,7 +2981,23 @@
                       <td> 11</td>
                       <td > <a href="" class="text-info">طباعة</a></td>
                      
-                      <td class="text-success"> فعال</td>
+                      <td >  <div class="btn-group dropup mb-6 me-6">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          ارسال الي </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <li>
+                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#open-file"> 
+                              
+                              الشركات</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item">
+                              الغاء الطلب</a>
+                          </li>
+                          
+                        </ul>
+                      </div></td>
                     </tr>
   
                   </tbody>
@@ -2990,6 +3006,38 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- model open file  -->
+      <div id="open-file" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center">
+              <h4 class="modal-title mt-2" id="myModalLabel">
+                إرسال طلبات الشراء</h4> <hr>
+               
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5 class="mb-4"> طلب شراء <span class="text-info"> (احمد محمد احمد)</span></h5>
+              <form>
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="file" class="form-control mb-2" id="input1">
+                  </div>
+                 
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer d-flex ">
+              <button type="submit" class="btn btn-primary">ارسال </button>
+              <button type="button" class="btn bg-danger-subtle text-danger  waves-effect" data-bs-dismiss="modal">
+                الغاء
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
       </div>
       <script>
         function handleColorTheme(e) {
