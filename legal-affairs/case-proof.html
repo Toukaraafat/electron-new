@@ -2346,15 +2346,12 @@
                             الإجراءات </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li>
-                              <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#open-file">تحويل الطلب
+                              <a class="btn btn-success rounded-0 w-100 mt-2" data-bs-toggle="modal" data-bs-target="#open-file">تحويل الطلب
                                 للتنفيذ</a>
                             </li>
                             <li>
-                              <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#open-details">
+                              <a class="btn btn-primary rounded-0 w-100 mt-2" data-bs-toggle="modal" data-bs-target="#open-details">
                                 التفاصيل</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#add-note"> الملاحظات</a>
                             </li>
                 
                           </ul>
@@ -2487,6 +2484,30 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="add-note">
+                <h4 class="mb-3">اضف ملاحظة</h4>
+              <form>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label"> الاتصال</label>
+                    <select class="form-select">
+                      <option value="3">
+                        رد </option>
+                      <option value="2">
+                        لم يرد </option>
+                      <option value="1">
+                        ملاحظة </option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <div class="my-3">
+                      <label class="form-label">الملاحظات</label>
+                      <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
             </div>
             <div class="tab-pane p-3" id="navpill-2" role="tabpanel">
               <table id="notes2" class="table table-bordered border text-wrap align-middle">
@@ -2577,7 +2598,7 @@
     </div>
     <!-- /.modal-dialog -->
   </div>
-  <div id="add-note" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md" aria-hidden="true">
+  <!-- <div id="add-note" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-lg">
       <div class="modal-content">
         <div class="modal-header d-flex align-items-center">
@@ -2615,10 +2636,8 @@
           </button>
         </div>
       </div>
-      <!-- /.modal-content -->
     </div>
-    <!-- /.modal-dialog -->
-  </div>
+  </div> -->
   <script src="../assets/js/vendor.min.js"></script>
   <!-- Import Js Files -->
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
