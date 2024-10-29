@@ -1239,14 +1239,6 @@ body {
 .ti-ballon-off:before {
     content: "\f0fd"
 }
-.dt-buttons{
-	
-    margin-bottom: 20px;
-
-}
-.dataTables_info{
-	 margin-bottom: 20px;
-}
 
 .ti-ballpen:before {
     content: "\f06e"
@@ -40390,7 +40382,9 @@ html[data-boxed-layout=boxed] .container-xxl {
 #sidebarnav .selected .secondary-hover-bg::before,
 #sidebarnav .selected .success-hover-bg::before,
 #sidebarnav .selected .warning-hover-bg::before {
-    width: calc(100% + 16px)
+    /* width: calc(100% + 16px) */
+    width: 100%;
+
 }
 
 #sidebarnav .sidebar-item .danger-hover-bg.active::before,
@@ -40400,7 +40394,7 @@ html[data-boxed-layout=boxed] .container-xxl {
 #sidebarnav .sidebar-item .secondary-hover-bg.active::before,
 #sidebarnav .sidebar-item .success-hover-bg.active::before,
 #sidebarnav .sidebar-item .warning-hover-bg.active::before {
-    width: calc(100% + 16px)
+    width: 100%;
 }
 
 .danger-hover-bg::before {
@@ -53435,14 +53429,11 @@ body .connect-sorting-content {
 
 .btn-filter {
     width: 18rem;
-  }
-  .text-gray{
-    color:#a7acb2;
-  }
-  .hidden {
-    display: none;
 }
-.form-control::placeholder{
-    font-size: 0.8rem; 
-    color: gray;
+.btn-static{
+    padding: 9px 27px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
 }
