@@ -2268,10 +2268,10 @@
           </div>
           <div class="card">
             <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
-              <h4 class="card-title mb-0">المناطق</h4>
+              <h4 class="card-title mb-0">الوسطاء</h4>
               <button class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 " data-bs-toggle="modal"
                 data-bs-target="#bs-example-modal-md">
-                أضف منطقة </button>
+                أضف وسيط جديد </button>
               <!-- sample modal content -->
               <div id="bs-example-modal-md" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md"
                 aria-hidden="true">
@@ -2279,29 +2279,25 @@
                   <div class="modal-content">
                     <div class="modal-header d-flex align-items-center">
                       <h4 class="modal-title" id="myModalLabel">
-                       أضف منطقة</h4>
+                       أضف وسيط جديد</h4>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form>
                         <div class="form-row">
                           <div class="form-group">
-                            <label class="form-label" for="input1 "> الإسم بالعربية</label>
+                            <label class="form-label" for="input1 "> الإسم </label>
                             <input type="text" class="form-control mb-2" id="input1">
                           </div>
                           <div class="form-group">
-                            <label class="form-label" for="input2 ">الإسم بالإنجليزية </label>
+                            <label class="form-label" for="input2 "> الهاتف </label>
                             <input type="text" class="form-control mb-2" id="input2">
                           </div>
                           <div class="form-group">
-                            <label class="form-label">المحافظة</label>
-                            <select class="form-select">
-                              <option>أختر المحافظة</option>
-                              <option>القاهرة</option>
-                              <option>الإسماعيلية</option>
-                              <option>الجيزة</option>
-                            </select>
+                            <label class="form-label" for="input2 "> النسبة </label>
+                            <input type="text" class="form-control mb-2" id="input2">
                           </div>
+                         
                         </div>
                       </form>
                     </div>
@@ -2324,13 +2320,13 @@
                   <thead>
                     <!-- start row -->
                     <tr>
-                      <th>#</th>
-                      <th> الإسم بالعربية </th>
-                      <th>الإسم بالإنجليزية</th>
-                      <th>المحافظات</th>
-                      <th> انشأ بواسطة</th>
-                      <th>الإجراءات</th>
-   
+                      <th>اسم الوسيط</th>
+                      <th> الهاتف  </th>
+                      <th> النسبة</th>
+                      <th>عدد المعاملات</th>
+                      <th> عدد الزيارات </th>
+                      <th>تعديل</th>
+                      <th>ارسال الرابط</th>
                     </tr>
                     <!-- end row -->
                   </thead>
@@ -2350,13 +2346,54 @@
                       </td>
                       <td>
                         <div class="action-btn">
-                          <a href="javascript:void(0)" class="text-primary edit">
+                          <a href="javascript:void(0)" class="text-primary edit"  data-bs-toggle="modal"
+                          data-bs-target="#edit-example-modal-md">
                             <i class="ti ti-pencil fs-5"></i>
                           </a>
-                          <a href="javascript:void(0)" class="text-dark delete ms-2">
-                            <i class="ti ti-trash fs-5"></i>
-                          </a>
+                          <div id="edit-example-modal-md" class="modal fade" tabindex="-1" aria-labelledby="edit-example-modal-md"
+                          aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header d-flex align-items-center">
+                                <h4 class="modal-title" id="myModalLabel">
+                                   تعديل بيانات الوسيط</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="form-row">
+                                    <div class="form-group">
+                                      <label class="form-label" for="input1 "> الإسم </label>
+                                      <input type="text" class="form-control mb-2" id="input1">
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="form-label" for="input2 "> الهاتف </label>
+                                      <input type="text" class="form-control mb-2" id="input2">
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="form-label" for="input2 "> النسبة </label>
+                                      <input type="text" class="form-control mb-2" id="input2">
+                                    </div>
+                                   
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer d-flex ">
+                                <button type="submit" class="btn btn-primary">حفظ</button>
+                                <button type="button" class="btn bg-danger-subtle text-danger  waves-effect"
+                                  data-bs-dismiss="modal">
+                                  الغاء
+                                </button>
+                              </div>
+                            </div>
+                            <!-- /.modal-content -->
+                          </div>
+                          <!-- /.modal-dialog -->
                         </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a class="text-info text-underline" href="./required-data.html"> ارسال الرابط</a>
                       </td>
                     </tr>
 
