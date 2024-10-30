@@ -53441,9 +53441,9 @@ body .connect-sorting-content {
 .card{
     padding-inline: 1rem;
 }
-table{
+/* table{
     text-align: center;
-}
+} */
 input[type="file"] {
  direction: ltr;
 }
