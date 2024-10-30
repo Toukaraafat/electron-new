@@ -2253,7 +2253,102 @@
             </div>
           </header>
           <!--  Header End -->
+          <div class="mb-3 overflow-hidden position-relative">
+            <div class="px-3">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item">
+                    <a href="..index.html">الرئيسية</a>
+                  </li>
+                  <li class="breadcrumb-item">الشئون القانونية</li>
+                  <li class="breadcrumb-item" aria-current="page">إقرارات الدين</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="card mt-4 py-3">
+            <div class="d-flex flex-wrap ">
+              <a class="btn-filter bg-warning-subtle text-warning px-4 fs-4 mx-1 mb-2">
+                فعال </a>
+              <a class="btn-filter  bg-success-subtle text-success px-4 fs-4 mx-1 mb-2">
+                مطلوب إلغاؤه </a>
+              <a class="btn-filter  bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2">
+                ملغي </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
+              <h4 class="card-title mb-0">إقرارات الدين </h4>
+              <div class="button-group">
+                <button class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 " data-bs-toggle="modal"
+                  data-bs-target="#add">
+                  أضف إقرار دين </button>
+                <button class="btn me-1 mb-1 bg-success-subtle text-success px-4 fs-4 " data-bs-toggle="modal"
+                  data-bs-target="#data">
+                  الإحصائيات</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive pb-4">
+                <table id="all-student" class="table table-bordered border text-nowrap align-middle">
+                  <thead>
+                    <!-- start row -->
+                    <tr>
+                      <th>#</th>
+                      <th>الاسم</th>
+                      <th>الرقم المدني</th>
+                      <th> القسم</th>
+                      <th>مبلغ إقرار الدين</th>
+                      <th> جهة الإقرار
+                      </th>
+                      <th>الرقم </th>
+                      <th> الصورة</th>
+                      <th> مطلوب إلغاؤه</th>
+                    </tr>
+                    <!-- end row -->
+                  </thead>
+                  <tbody>
+                    <!-- start row -->
+                    <tr data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                      aria-controls="collapseExample">
+                      <td>
+                        19
+                      </td>
+                      <td>
+                        تقى
+                      </td>
+                      <td>	299110600145</td>
+                      <td>الأقساط</td>
+                      <td>1999</td>
+                      <td>الحكومة مول الجهراء</td>
+                      <td>
+                        1232212
+                      </td>
+                      <td>
+                        <a class="btn btn-primary" href="#">صورة</a>
+                      </td>
+                      <td>
+                        <button class="btn btn-success me-6" data-bs-toggle="modal"
+                        data-bs-target="#open">
+                          إلغاء</button>
+                      </td>
+                    </tr>
+                    <!-- <tr>
+                        <div class="collapse" id="collapseExample">
+                          <div class="card card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high
+                            life accusamus terry richardson ad squid. Nihil anim
+                            keffiyeh helvetica, craft beer labore wes anderson cred
+                            nesciunt sapiente ea proident.
+                          </div>
+                        </div>
+                    </tr> -->
+                  </tbody>
+                </table>
 
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2263,7 +2358,36 @@
   </div>
 
 
-
+  <!-- modals -->
+  <div id="open" class="modal fade" tabindex="-1" aria-labelledby="open" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center">
+          <h4 class="modal-title" id="myModalLabel">
+            إلغاء اقرار الدين</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group my-3">
+                <label for="formFile" class="form-label">صورة المخالطة</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex ">
+          <button type="submit" class="btn btn-primary">إلغاء اقرار الدين</button>
+          <button type="button" class="btn bg-danger-subtle text-danger  waves-effect" data-bs-dismiss="modal">
+            إغلاق
+          </button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
 
   <script src="../assets/js/vendor.min.js"></script>
   <!-- Import Js Files -->
