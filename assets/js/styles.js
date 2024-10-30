@@ -18,3 +18,7 @@ window.onload = function() {
     document.getElementById('barcodeInput').classList.add('hidden');
     document.getElementById('serialInput').classList.add('hidden');
 };
+
+function showInputs() {
+    document.getElementById('additionalInputs').classList.remove('hidden');
+}
