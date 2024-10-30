@@ -3322,7 +3322,7 @@
                   <a href="../horizontal/index.html">الرئيسية</a>
                 </li>
                 <li class="breadcrumb-item"> المعاملات المقدمة </li>
-                <li class="breadcrumb-item" aria-current="page">المعاملات المرفوضة </li>
+                <li class="breadcrumb-item" aria-current="page">المعاملات المقبولة </li>
               </ol>
             </nav>
           </div>
@@ -3331,43 +3331,18 @@
         <div class="card mt-4 py-3">
           <div class="d-flex flex-wrap ">
             <a class=" btn-filter me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2 ">
-              المتقدميين (1221)
+              العدد الكلي (1221)
             </a>
-            <a class="btn-filter bg-info-subtle text-info  px-4 fs-4 mx-1 mb-2">
-              قيد الاستعلام (1221)
-            </a>
-            <a class="btn-filter bg-warning-subtle text-warning px-4 fs-4 mx-1 mb-2">
-              التدقيق القضائي (1221)
-            </a>
-            <a class="btn-filter  bg-success-subtle text-success px-4 fs-4 mx-1 mb-2">
-              استعلام السيارات (1221)
-            </a>
-            <a class="btn-filter  bg-success-subtle text-success px-4 fs-4 mx-1 mb-2">
-              تم الاستعلام (1221)
-            </a>
-
-            <a class="btn-filter bg-danger-subtle text-danger px-4 fs-4 mx-1 mb-2">
-
-              مقبول (1221) </a>
-            <a class="btn-filter px-4 bg-primary-subtle text-primaryfs-4 mx-1 mb-2">
-              مقبول بشرط (1221) </a>
-            <a class="btn-filter bg-danger-subtle text-danger px-4 fs-4 mx-1 mb-2">
-              مرفوض (1221) </a>
           </div>
         </div>
 
         <div class="card">
           <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
-            <h4 class="card-title mb-0">  المعاملات المرفوضة</h4>
+            <h4 class="card-title mb-0">  المعاملات المقبولة</h4>
             <div class="d-flex">
-              <button class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 " data-bs-toggle="modal"
-                data-bs-target="#bs-example-modal-md">
-                أضف جديد </button>
 
               <a class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 " href="./archive.html">
                 الارشيف </a>
-              <a class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 " href="./intermediaries.html">
-                الوسطاء </a>
             </div>
           </div>
           <div class="card-body">
@@ -3381,18 +3356,19 @@
                     <th>الوسيط </th>
                     <th>الراتب </th>
                     <th>الوظيفة</th>
-                    <th>استعلام قضائي </th>
-                    <th>استعلام</th>
                     <th>البنك </th>
                     <th> مجموع الاقساط </th>
                     <th> التاريخ</th>
-                    <th> سبب الرفض</th>
+                    <th> تقديم</th>
                   </tr>
                   <!-- end row -->
                 </thead>
                 <tbody>
                   <!-- start row -->
                   <tr>
+                    <td>
+                      1
+                    </td>
                     <td>
                       1
                     </td>
@@ -3419,44 +3395,20 @@
                         </div>
                       </div>
                     </td>
+ <td>
+                      <div class="block">
+                        <h5>01022</h5>
+                        <a class="btn btn-secondary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#open-details">
 
+                          الملاحظات</a>
+                      </div>
+
+            </div>
+            </td>
                     <td>
                       <div class="btn-group dropup mb-6 me-6 d-block">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          نتيجة الاستعلام </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <li>
-                            <a class="btn btn-success rounded-0 w-100 mt-2">
-                              قيد الاستعلام
-                            </a>
-                          </li>
-                          <li>
-                            <a class="btn btn-info rounded-0 w-100 mt-2">
-                              التدقيق القضائي</a>
-                          </li>
-                          <li>
-                            <a class="btn btn-primary rounded-0 w-100 mt-2">استعلام سيارات
-                            </a>
-                          </li>
-                          <li>
-                            <a class="btn btn-success rounded-0 w-100 mt-2">
-                              تم الاستعلام</a>
-                          </li>
-                          <li>
-                            <a class="btn btn-info rounded-0 w-100 mt-2">
-                              مقبول بشرط</a>
-                          </li>
-                          <li>
-                            <a class="btn btn-primary rounded-0 w-100 mt-2">
-                              مقبول</a>
-                          </li>
-                          <li>
-                            <a class="btn btn-warning rounded-0 w-100 mt-2">
-                              مرفوض</a>
-                          </li>
-
-                        </ul>
+                        <a class="btn btn-secondary " type="button" href="./transaction-acceptence.html" >
+                      اعتماد المعاملة</a>
                       </div>
                       <div>
 
@@ -3501,23 +3453,8 @@
                         </div>
                         </li>
                     </td>
-                    <td>
-                      1232212
-                    </td>
-                    <td>
-                      1232212
-                    </td>
-                    <td>
-                      <div class="block">
-                        <h5>01022</h5>
-                        <a class="btn btn-secondary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#open-details">
-
-                          الملاحظات</a>
-                      </div>
-
-            </div>
-            </td>
-            <td>سبب الرافض </td>
+                   
+                   
             </tr>
 
             </tbody>
@@ -3976,69 +3913,12 @@
       <div class="modal-content">
         <div class="modal-header d-flex align-items-center">
           <h4 class="modal-title" id="myModalLabel">
-            ملاحظات اثبات الحالة </h4>
+            الاتصال و الملاحظة   </h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <ul class="nav nav-pills" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" data-bs-toggle="tab" href="#navpill-1" role="tab">
-                <span>الملاحظات</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" href="#navpill-2" role="tab">
-                <span>الرد</span>
-              </a>
-            </li>
-
-          </ul>
-          <!-- Tab panes -->
-          <div class="tab-content border mt-2">
-            <div class="tab-pane active p-3" id="navpill-1" role="tabpanel">
-              <h6 class="text-danger">عفوا ، لم يتم الاستعلام القضائي</h6>
-              <h6 class="text-danger">عفوا ، لم يتم الاستعلام للتنفيذ</h6>
-              <table id="notes1" class="table table-bordered border text-wrap align-middle">
-                <thead>
-                  <!-- start row -->
-                  <tr>
-                    <th>اليوزر</th>
-                    <th>الاتصال</th>
-                    <th>الساعة</th>
-                    <th>التاريخ</th>
-                    <th> الملاحظه</th>
-
-
-
-                  </tr>
-                  <!-- end row -->
-                </thead>
-                <tbody>
-                  <!-- start row -->
-                  <tr data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
-                    aria-controls="collapseExample">
-                    <td>
-                      تقى
-                    </td>
-                    <td>
-                      ملاحظة
-                    </td>
-                    <td>
-                      29/10/2024
-                    </td>
-                    <td>12:00 <span class="d-block">مساءا</span></td>
-                    <td>
-                      <p>
-                        تم مراجعة قسم الاعلان للوقوف على سبب تاخر الامج وتيبن تاخير المندوب فى تسليم الملف للامج وتم عمل
-                        اللازم وادخال الملف امج وسيتم عمل الحسبه ومتابعة باقى الاجراءات
-                      </p>
-                    </td>
-
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="tab-pane p-3" id="navpill-2" role="tabpanel">
+        
+         
               <form>
                 <div class="form-row">
                   <div class="form-group">
@@ -4060,9 +3940,8 @@
                     </div>
                   </div>
               </form>
-            </div>
-          </div>
-        </div>
+           
+       
       </div>
       <div class="modal-footer d-flex ">
         <!-- <a class="btn btn-primary" href="../installments/show-installment.html"> تفصيل المعاملة</a> -->

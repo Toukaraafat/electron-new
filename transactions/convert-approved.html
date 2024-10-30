@@ -12,7 +12,10 @@
 
   <!-- Core Css -->
   <link rel="stylesheet" href="../assets/css/styles.css" />
-
+<!-- font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap" rel="stylesheet">
   <title>Electron</title>
   <link rel="stylesheet" href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
 </head>
@@ -2909,139 +2912,474 @@
                   <li class="breadcrumb-item">
                     <a href="../horizontal/index.html">الرئيسية</a>
                   </li>
-                  <li class="breadcrumb-item"> الشركات الموردة </li>
-                  <li class="breadcrumb-item" aria-current="page">الارشيف   </li>
+                  <li class="breadcrumb-item">عملاء الاقساط </li>
+                  <li class="breadcrumb-item" aria-current="page">نظام الاقساط</li>
                 </ol>
               </nav>
             </div>
           </div>
-          <div class="card mt-4 py-3">
-            <div class="row pt-3 px-4">
-              <div class="col-md-5">
-                <div class="mb-5">
-                  <input type="text" class="form-control " placeholder="رقم طلب الشراء">
-                 
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="mb-3">
-                  <select class="form-select " id="exampleFormControlSelect1">
-                    <option selected disabled>الشركة</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                 
-                </div>
-              </div>
-
-              <div class="col-md-2">
-                <div class="mb-3">
-              <button class=" btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2 " type="submit" href="./purchase-request.html">
-               بحث
-              </button>
-              </div>
-          </div>
-        </div>
-      </div>
+          
           <div class="card">
             <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
-              <form class="nav-link position-relative shadow-none">
-           <iconify-icon icon="solar:magnifer-linear" class="text-dark position-absolute top-50 start-0 translate-middle-y text-dark ms-3"></iconify-icon>
+              <h4 class="card-title mb-0"> نظام الاقساط</h4>
+            </div>
+           
+      </div>
 
-                <input type="text" class="form-control rounded-3 py-2 ps-5 text-dark" placeholder="ابحث هنا ....">
-              </form>
-              <a class=" btn-filter  me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2 " type="submit" href="./sending-archive.html">
-             الارشيف  </a>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive pb-4">
-                <table id="all-student" class="table table-bordered border text-nowrap align-middle">
-                  <thead>
-                    <!-- start row -->
-                    <tr>
-                      <th>رقم طلب الشراء</th>
-                      <th>اسم الشركة  </th>
-                      <th>  الموديل  </th>
-                      <th>  مكان التوريد  </th>
-                      <th>  القيمة الإجمالية  </th>
-                      <th>  	طباعة طلب الشراء   </th>
-                      <th>  ارسال الي  </th>
-                    </tr>
-                    <!-- end row -->
-                  </thead>
-                  <tbody>
-                    <!-- start row -->
-                    <tr>
-                      <td> 1</td>
-                      <td>12</td>
-                      <td> 11</td>
-                      <td> 11</td>
-                      <td> 11</td>
-                      <td > <a href="" class="text-info">طباعة</a></td>
-                     
-                      <td >
-                          <div class="btn-group dropup mb-6 me-6">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          ارسال الي </button>
-                     
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <li>
-                            <a class="btn btn-success rounded-0 w-100 mt-2"data-bs-toggle="modal" data-bs-target="#open-file"> 
-                              
-                              الشركات</a>
-                          </li>
-                          <li>
-                            <a class="btn btn-primary rounded-0 w-100 mt-2" >
-                              الغاء الطلب</a>
-                          </li>
-              
-                        </ul>
-                      </div>
-                    </td>
-                    </tr>
-  
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- model open file  -->
-      <div id="open-file" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg">
-          <div class="modal-content">
-            <div class="modal-header d-flex align-items-center">
-              <h4 class="modal-title mt-2" id="myModalLabel">
-                إرسال طلبات الشراء</h4> <hr>
-               
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <h5 class="mb-4"> طلب شراء <span class="text-info"> (احمد محمد احمد)</span></h5>
-              <form>
-                <div class="form-row">
-                  <div class="form-group">
-                    <input type="file" class="form-control mb-2" id="input1">
-                  </div>
-                 
+      <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneone" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <i class="ti ti-message-2 fs-6 d-block mx-1" style="color: rgb(202, 226, 43);"></i> 
+                                 <span class="text-gray mx-1"> نظام الاقساط( قم بالضغط هنا   لملئ المدخلات)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOneone" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                           
+                            <div class="row pt-3">
+                                <div class="col-md-6">
+                                  <div class="mb-3">
+                                    <label class="form-label"> مبلغ الموافقة (التكلفة) (1000.000 د.ك ) </label>
+                                    <input type="text" id="firstName" class="form-control" />
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="mb-3">
+                                    <label class="form-label">  المقدم
+                                    </label>
+                                    <input type="text" id="firstName" class="form-control" />
+                    
+                                  </div>
+                                </div>
+                    
+                                <div class="col-md-6">
+                                  <div class="mb-3">
+                                    <label class="form-label"> 
+                                        عدد الأقساط </label>
+                                        <select class="form-select">
+                                            <option>10%</option>
+                                            <option>10%</option>
+                                            <option>10%</option>
+                                          </select>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                      <label class="form-label"> 
+                                        شهور بدون نسبة </label>
+                                          <select class="form-select">
+                                              <option>10%</option>
+                                              <option>10%</option>
+                                              <option>10%</option>
+                                            </select>
+                                    </div>
+                                  </div>
+                                <div class="col-md-6">
+                                  <div class="mb-3">
+                                    <label class="form-label"> إجمالي المبلغ المقسط </label>
+                                    <input type="text" id="firstName" class="form-control" />
+                    
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="mb-3">
+                                    <label class="form-label">  القسط الشهري </label>
+                                    <input type="text" id="firstName" class="form-control" />
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                      <label class="form-label">   قسط السينت </label>
+                                      <input type="text" id="firstName" class="form-control" />
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="mb-3">
+                                      <label class="form-label">  القسط الداخلي
+                                    </label>
+                                      <input type="text" id="firstName" class="form-control" />
+                                    </div>
+                                  </div>
+                                <div class="col-md-12">
+                                  <div class="mb-3">
+                                    <label class="form-label"> بداية أول قسط </label>
+                                    <select class="form-select">
+                                      <option>1-1-1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+
+                        </div>
+                    </div>
                 </div>
-              </form>
             </div>
-            <div class="modal-footer d-flex ">
-              <button type="submit" class="btn btn-primary">ارسال </button>
-              <button type="button" class="btn bg-danger-subtle text-danger  waves-effect" data-bs-dismiss="modal">
-                الغاء
-              </button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
-      </div>
+    </div>
+      <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <i class="ti ti-user-check fs-6 d-block mx-1" style="color: rgb(1, 122, 58);"></i> بيانات العميل <span class="text-gray mx-1">( قم بالضغط هنا لاظهار بيانات العميل)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="table-responsive pb-4">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr><th>الاسم</th><td>تقي</td></tr>
+                                            <tr><th>الرقم المدني</th><td>266043000658</td></tr>
+                                            <tr><th> الجنسية</th><td>55583614</td></tr>
+                                            <tr><th>الهاتف </th><td>55583614</td></tr>
+                                            <tr><th> البنك</th><td>55583614</td></tr>
+                                            <tr><th>المحافظة </th><td>55583614</td></tr>
+                                            <tr><th>جهة العمل </th><td>55583614</td></tr>
+                                            <tr><th>مجموع الأقساط</th><td>55583614</td></tr>
+                                            <tr><th>  مجموع مديونية الساينت</th><td>55583614</td></tr>
+                                            <tr><th> الوسيط</th><td>1</td></tr>
+                                            <tr><th>جهة الدخل ( 1 )  </th><td>1</td></tr>
+                                            <tr><th>الراتب (1)  </th><td>1</td></tr>
+                                            <tr><th>اجمالي الدخل </th><td>1</td></tr>
+                                            <tr><th>القسط المسموح  </th><td>1</td></tr>
+                                            <tr><th>القرض المسموح </th><td>1</td></tr>
+                                            <tr><th>صافي الراتب </th><td>1</td></tr>
+                                            <tr><th>القرض المسموح لصافي الراتب </th><td>1</td></tr>
+                                            <tr><th>لمت صافي الراتب </th><td>1</td></tr>
+                                            <tr><th>اجمالي الاقساط المتاخرة </th><td>1</td></tr>
+                                            <tr><th>  عدد الملفات المفتوحة</th><td>1</td></tr>
+                                            <tr><th> اقرار دين</th><td>1</td></tr>
+                                            <tr><th> مؤشر قضائي</th><td class="text-success">لا يوجد</td></tr>
+                                            <tr><th>ديون معدومة</th><td class="text-success">لا يوجد</td></tr>
+                                            <tr><th>دخول الساينت</th><td>1</td></tr>
+                                            <tr><th> وصل أمانة</th><td>1</td></tr>
+                                            <tr><th> </th><td><button type="button" class="btn btn-primary">موافقة</button></td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleNotes">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwotwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwotwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <i class="ti ti-message-2 fs-6 d-block mx-1" style="color: blueviolet;"></i> صور الاوراق <span class="text-gray mx-1">( قم بالضغط هنا لاظهار  صور الاوراق)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwotwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExampleNotes">
+                            <div class="accordion-body">
+                                 <div> 
+                                    <!-- هنا -->
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleItems">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                <i class="ti ti-sort-descending-2 fs-6 mx-1" style="color: rgb(245, 18, 18);"></i> ملفات الساينت  <span class="text-gray mx-1">( قم بالضغط هنا لاظهار   ملفات الساينت)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExampleItems">
+                            <div class="accordion-body">
+                                <div class="table-responsive pb-4">
+                                    <table id="all-student" class="table table-bordered border text-nowrap align-middle">
+                                      <thead>
+                                        <!-- start row -->
+                                        <tr>
+                                          <th> # </th>
+                                          <th>الجهة </th>
+                                          <th>  تاريخ فتح حساب </th>
+                                          <th>	الرصيد المتبقي   </th>
+                                          <th>  قيمة القسط </th>
+                                          <th>   قيمة المديونية  </th>
+                                          <th>  فتره السداد </th>
+                                          <th>  مبلغ القرض  </th>
+                                          <th>   إعادة الجدولة  </th>
+                                        </tr>
+                                        <!-- end row -->
+                                      </thead>
+                                      <tbody>
+                                        <!-- start row -->
+                                        <tr>
+                                          <td>
+                                            احمد
+                                          </td>
+                                          <td>25/05/2012 </td>
+                                          <td>12</td>
+                                          <td>12</td>
+                                          <td>123 9988568</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                        </tr>
+                      
+                                      </tbody>
+                                    </table>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleFiles">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                <i class="ti ti-bookmark fs-6 mx-1" style="color: rgb(245, 234, 18);"></i>  السيارات <span class="text-gray mx-1">( قم بالضغط هنا لاظهار  الملفات المرفوعة)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExampleItems">
+                            <div class="accordion-body">
+                               
+                                  <table id="notes1" class="table table-bordered border text-wrap align-middle">
+                                    <thead>
+                                      <!-- start row -->
+                                      <tr>
+                                        <th>#</th>
+                                        <th>النوع</th>
+                                        <th> السنه</th>
+                                        <th>متوسط السعر</th>
+                                      
+                    
+                    
+                    
+                                      </tr>
+                                      <!-- end row -->
+                                    </thead>
+                                    <tbody>
+                                      <!-- start row -->
+                                      <tr data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                        <td>
+                                          تقى
+                                        </td>
+                                        <td>
+                                          ملاحظة
+                                        </td>
+                                        <td>
+                                          تقى
+                                        </td>
+                                        <td>
+                                          ملاحظة
+                                        </td>
+                                       
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleFiles">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingsix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsesix" aria-expanded="false" aria-controls="flush-collapseFive">
+                                <i class="ti ti-bookmark fs-6 mx-1" style="color: rgb(245, 234, 18);"></i>  القضايا <span class="text-gray mx-1">( قم بالضغط هنا لاظهار   القضايا)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapsesix" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExampleItems">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-wrap ">
+                                    <a class="  me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2 ">
+                                      المفتوحة : 0.000 د.ك
+                                    </a>
+                                    <a class=" bg-success-subtle text-success  px-4 fs-4 mx-1 mb-2">
+                                      المغلقة : 2276.000 د.ك
+                                    </a>
+                                    <a class=" bg-warning-subtle text-warning px-4 fs-4 mx-1 mb-2">
+                                      الإجمالي : 2276.000 د.ك
+                                    </a>
+                                  </div>
+                                  <table id="notes1" class="table table-bordered border text-wrap align-middle">
+                                    <thead>
+                                      <!-- start row -->
+                                      <tr>
+                                        <th>اليوزر</th>
+                                        <th>رقم القضية</th>
+                                        <th>الحالة</th>
+                                        <th>الجهه</th>
+                                        <th>المبلغ</th>
+                                        <th>التاريخ</th>
+                    
+                    
+                    
+                                      </tr>
+                                      <!-- end row -->
+                                    </thead>
+                                    <tbody>
+                                      <!-- start row -->
+                                      <tr data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                        <td>
+                                          تقى
+                                        </td>
+                                        <td>
+                                          ملاحظة
+                                        </td>
+                                        <td>
+                                          تقى
+                                        </td>
+                                        <td>
+                                          ملاحظة
+                                        </td>
+                                        <td>
+                                         29/10/2024
+                                        </td>
+                                        <td>12:00 <span class="d-block">مساءا</span></td>
+                                       
+                    
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <hr>
+                                  <div class="d-flex my-2 ">
+                                    <h5>قضايا التنفيذ</h5>
+                                   <div class="my-1">
+                                    <a class="  me-1 bg-primary-subtle text-primary px-4 fs-4 mx-1 mb-2 ">
+                                        الإجمالي : 0 د.ك
+                                      </a>
+                                   </div>
+                                    
+                                  </div>
+                                  <table id="notes1" class="table table-bordered border text-wrap align-middle">
+                                    <thead>
+                                      <!-- start row -->
+                                      <tr>
+                                        <th>اليوزر</th>
+                                        <th>الاتصال </th>
+                                        <th>الساعه</th>
+                                        <th>التاريخ</th>
+                                        <th>الملاحظة</th>
+                    
+                    
+                    
+                                      </tr>
+                                      <!-- end row -->
+                                    </thead>
+                                    <tbody>
+                                      <!-- start row -->
+                                      <tr data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                        <td>
+                                          تقى
+                                        </td>
+                                        <td>
+                                          ملاحظة
+                                        </td>
+                                        <td>
+                                          تقى
+                                        </td>
+                                        <td>
+                                          ملاحظة
+                                        </td>
+                                        <td>
+                                         29/10/2024
+                                        </td>
+                                       
+                    
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionFlushExampleAccount">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                <i class="ti ti-inbox fs-6 mx-1" style="color: rgb(18, 245, 226);"></i>  الملاحظات <span class="text-gray mx-1">( قم بالضغط هنا لاظهار   الملاحظات)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExampleAccount">
+                            <div class="accordion-body">
+                                <div class="table-responsive pb-4">
+                                    <table id="all-student" class="table table-bordered border text-nowrap align-middle">
+                                      <thead>
+                                        <!-- start row -->
+                                        <tr>
+                                          <th>#</th>
+                                          <th>اليوزر </th>
+                                          <th>  الاتصال </th>
+                                          <th> الساعة  </th>
+                                          <th>   التاريخ</th>
+                                          <th>     الملاحظة </th>
+                                        </tr>
+                                        <!-- end row -->
+                                      </thead>
+                                      <tbody>
+                                        <!-- start row -->
+                                        <tr>
+                                          <td>
+                                            احمد
+                                          </td>
+                                          <td>25/05/2012 </td>
+                                          <td>12</td>
+                                          <td>123 9988568</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                        </tr>
+                      
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
       <script>
         function handleColorTheme(e) {
           document.documentElement.setAttribute("data-color-theme", e);
@@ -3230,6 +3568,40 @@
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
   <script src="../assets/js/datatable/datatable.init.js"></script>
+  <script>
+    document.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('click', () => {
+        const filePath = item.getAttribute('data-file');
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+        const downloadButton = document.getElementById('download');
+        
+        modal.style.display = 'flex';
+        modalContent.src = filePath;
+        downloadButton.href = filePath;
+    });
+});
+
+document.getElementById('close').addEventListener('click', () => {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('print').addEventListener('click', () => {
+    const modalContent = document.getElementById('modal-content');
+    modalContent.contentWindow.print();
+});
+
+  </script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
