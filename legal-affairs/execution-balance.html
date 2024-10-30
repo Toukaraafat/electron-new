@@ -2261,7 +2261,7 @@
                     <a href="..index.html">الرئيسية</a>
                   </li>
                   <li class="breadcrumb-item">الشئون القانونية</li>
-                  <li class="breadcrumb-item" aria-current="page"> حجز السيارات</li>
+                  <li class="breadcrumb-item" aria-current="page"> رصيد التنفيذ</li>
                 </ol>
               </nav>
             </div>
@@ -2322,7 +2322,10 @@
           </div>
           <div class="card">
             <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
-              <h4 class="card-title mb-0"> حجز السيارات</h4>
+              <h4 class="card-title mb-0"> رصيد التنفيذ </h4>
+              <button class="btn me-1 mb-1 bg-primary-subtle text-primary px-4 fs-4 " data-bs-toggle="modal"
+                data-bs-target="#data">
+                الشيكات المستلمة</button>
             </div>
             <div class="card-body">
               <div class="table-responsive pb-4">
@@ -2382,6 +2385,11 @@
                               <a class="btn btn-warning rounded-0 w-100 mt-2" data-bs-toggle="modal"
                                 data-bs-target="#open-details">
                                 التفاصيل</a>
+                            </li>
+                            <li>
+                              <a class="btn btn-success rounded-0 w-100 mt-2" data-bs-toggle="modal"
+                                data-bs-target="#add-note"> اضافة استعلام 
+                              </a>
                             </li>
                             <li>
                               <a class="btn btn-primary rounded-0 w-100 mt-2" data-bs-toggle="modal"
@@ -2709,22 +2717,35 @@
         <div class="modal-body">
           <form>
             <div class="form-row">
-              <div class="form-group">
-                <label class="form-label"> الاتصال</label>
-                <select class="form-select">
-                  <option value="3">
-                    رد </option>
-                  <option value="2">
-                    لم يرد </option>
-                  <option value="1">
-                    ملاحظة </option>
-                </select>
+              <div class="form-group mb-3">
+                <label class="form-label">تاريخ فتح الملف</label>
+                <input type="date" class="form-control">
               </div>
-              <div class="form-group">
-                <div class="my-3">
-                  <label class="form-label">الملاحظات</label>
-                  <textarea class="form-control" rows="5"></textarea>
+              <div class="mb-7">
+                <label>
+                  <input type="radio" name="option" value="option1" onclick="showInputs()"> معاد
+                </label>
+                <label>
+                  <input type="radio" name="option" value="option2" onclick="showInputs()"> تم التبليغ
+                </label>
+
+                <div id="additionalInputs" class="hidden">
+                  <div class="form-group mb-3">
+                    <label class="form-label">التاريخ</label>
+                    <input type="date" class="form-control">
+                  </div>
+                  <div class="form-group my-3">
+                    <label for="formFile" class="form-label">الصورة </label>
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
+                  <div class="form-group">
+                    <div class="my-3">
+                      <label class="form-label">الملاحظات</label>
+                      <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                  </div>
                 </div>
+
               </div>
             </div>
           </form>
