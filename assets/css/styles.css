@@ -53427,13 +53427,20 @@ body .connect-sorting-content {
     width: auto;
 }
 
-.btn-filter {
+
+/* .btn-filter {
     width: 18rem;
-}
+} */
 .btn-static{
     padding: 9px 27px;
     font-size: 0.9375rem;
     font-weight: 500;
     line-height: 1.5;
+    text-align: center;
+}
+.card{
+    padding-inline: 1rem;
+}
+table{
     text-align: center;
 }
