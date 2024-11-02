@@ -22,3 +22,11 @@ window.onload = function() {
 function showInputs() {
     document.getElementById('additionalInputs').classList.remove('hidden');
 }
+
+function showInput() {
+    document.getElementById('inputField').classList.remove('hidden');
+}
+
+function hideInput() {
+    document.getElementById('inputField').classList.add('hidden');
+}
