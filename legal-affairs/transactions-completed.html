@@ -2354,8 +2354,6 @@
           </div>
         </div>
       </div>
-
-
     </div>
 
   </div>
@@ -2372,11 +2370,11 @@
         <div class="modal-body">
           <form>
             <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="input1"> الإسم/label>
+              <div class="form-group mb-3">
+                <label class="form-label" for="input1"> الإسم </label>
                 <input class="form-control" type="text" id="input1" />
               </div>
-              <div class="form-group">
+              <div class="form-group mb-3">
                 <label class="form-label"> المهنة </label>
                 <select class="form-select">
                   <option value="2">
@@ -2384,12 +2382,20 @@
                   <option value="1">
                     موظف محكمة  </option>
                 </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="input2"> رقم الواتساب او الايميل</label>
-                <input class="form-control" type="text" id="input2" />
-              </div>
-              <div class="form-group">
+                <select class="form-select hidden">
+                  <option value="3">
+                    1 بنك </option>
+                  <option value="4">
+                     بنك 2  </option>
+                </select>
+                <select class="form-select hidden">
+                  <option value="3">
+                   محكمة 1</option>
+                  <option value="4">
+                     محكمة 2  </option>
+                </select>
+              </div>      
+               <div class="form-group mb-3">
                 <label class="form-label"> طريقة التواصل</label>
                 <select class="form-select">
                   <option value="3">
@@ -2400,7 +2406,10 @@
                     رسالة نصية </option>
                 </select>
               </div>
-
+              <div class="form-group mb-3">
+                <label class="form-label" for="input2"> رقم الواتساب او الايميل</label>
+                <input class="form-control" type="text" id="input2" />
+              </div>
             </div>
           </form>
         </div>
