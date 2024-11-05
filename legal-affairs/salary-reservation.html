@@ -2340,16 +2340,17 @@
                     <tr data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
                       aria-controls="collapseExample">
                       <td>
-                        1 
+                        1
                       </td>
                       <td>
-334 <h6 class="btn-static bg-danger-subtle text-danger mt-2">33 يوم</h6>                      </td>
+                        334 <h6 class="btn-static bg-danger-subtle text-danger mt-2">33 يوم</h6>
+                      </td>
                       <td>تقى </td>
                       <td>12</td>
                       <td>123 9988568</td>
                       <td>2</td>
                       <td>
-3456689                      </td>
+                        3456689 </td>
                       <td>29/10/2024</td>
 
                       <td>
@@ -2371,9 +2372,9 @@
                               </a>
                             </li>
                             <li>
-                              <a class="btn btn-primary rounded-0 w-100 mt-2" data-bs-toggle="modal"
-                                data-bs-target="#open-settle">
-                                تحويل للتسوية </a>
+                              <button class="btn btn-primary rounded-0 w-100 mt-2" data-bs-toggle="modal"
+                                data-bs-target="#done-settle">
+                                إتمام التسوية</button>
                             </li>
                           </ul>
 
@@ -2398,6 +2399,154 @@
   </div>
 
   <!-- modals -->
+  <div id="estlaam-modal-md" class="modal fade" tabindex="-1" aria-labelledby="estlaam-modal-md"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+          <div class="modal-header d-flex align-items-center">
+              <h4 class="modal-title" id="myModalLabel">
+                  استعلام قضائي </h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form action="{{ route('installmentIssue.store') }}" method="POST" enctype="multipart/form-data">
+              @csrf
+
+              <input type="hidden" name="installment_clients_id" id="installment_clients_id" value="">
+              <div class="modal-body">
+                  <h5>معاملة جديدة <span class="text-info"> </span></h5>
+                  <div id="formRows">
+                      <div class="row issue-row mb-3" data-index="0">
+                          <div class="col">
+                              <p>رقم القضية</ح>
+                                  <input type="text" name="installment_issue[0][number_issue]"
+                                      class="form-control" required />
+                          </div>
+                          <div class="col">
+                              <p> الحالة</p>
+                              <div class="form-check">
+                                  <label class="" for="flexRadioDefault1">
+                                      مفتوح
+                                  </label>
+                                  <input class="" type="radio" name="installment_issue[0][status]"
+                                      id="flexRadioDefault1">
+
+                              </div>
+                              <div class="form-check">
+                                  <label class="" for="flexRadioDefault2">
+                                      مغلق
+                                  </label>
+                                  <input class="" type="radio" name="installment_issue[0][status]"
+                                      id="flexRadioDefault2" value="close" checked>
+
+                              </div>
+                          </div>
+                          <div class="col">
+                              <p>الجهه</p>
+                              <input type="text" name="installment_issue[0][working_company]"
+                                  class="form-control" required />
+                          </div>
+                          <div class="col">
+                              <p>مبلغ المفتوح</p>
+                              <input type="text" name="installment_issue[0][opening_amount]"
+                                  class="form-control" required />
+                          </div>
+                          <div class="col">
+                              <p>مبلغ المغلق</p>
+                              <input type="text" name="installment_issue[0][closing_amount]"
+                                  class="form-control" required />
+                          </div>
+                          <div class="col">
+                              <p>صورة القضية</p>
+                              <input type="file" name="installment_issue[0][image]" required>
+
+                          </div>
+                          <div class="col">
+                              <p>التاريخ</p>
+                              <input type="date" name="installment_issue[0][date]" class="form-control"
+                                  required />
+                          </div>
+                          <div class="col">
+                              <p>ازالة</p>
+                              <button type="button" class="btn btn-danger remove-row-btn">Remove</button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="mb-3 text-left">
+                      <button type="button" class="btn btn-secondary" id="addRowBtn1">اضافة قضية
+                          جديدة</button>
+                  </div>
+                  <div class="row" id ="total" style="display: none;">
+                      <div class="mb-3 col">
+                          <p>مجموع المفنوح</p>
+                          <input type="text" name="opening_total" id="opening_total" class="form-control"
+                              readonly />
+
+                      </div>
+                      <div class="mb-3 col">
+                          <p>مجموع المغلق</p>
+                          <input type="text" name="closing_total" id="closing_total" class="form-control"
+                              readonly />
+                      </div>
+                      <div class="mb-3 col">
+                          <p>مجموع الكلى</p>
+                          <input type="text" id="totalll" name="total_IC" class="form-control"
+                              readonly />
+                      </div>
+                  </div>
+
+              </div>
+              <div class="modal-footer d-flex ">
+                  <button type="submit" class="btn btn-primary">حفظ</button>
+                  <button type="button" class="btn bg-danger-subtle text-danger  waves-effect"
+                      data-bs-dismiss="modal">
+                      الغاء
+                  </button>
+              </div>
+          </form>
+      </div>
+      <!-- open file model  -->
+      <div id="open-file" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header d-flex align-items-center">
+                      <h4 class="modal-title" id="myModalLabel">
+                          إثبات حالة</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form>
+                          <div class="form-row">
+                              <div class="form-group">
+                                  <label class="form-label" for="input1 "> تاريخ </label>
+                                  <input type="date" class="form-control mb-2" id="input1">
+                              </div>
+                              <div class="form-group">
+                                  <label for="formFile" class="form-label">اختر صورة </label>
+                                  <input class="form-control" type="file" id="formFile" />
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer d-flex ">
+                      <button type="submit" class="btn btn-primary">حفظ وتحويل لأعلان التنفيذ</button>
+                      <button type="button" class="btn bg-danger-subtle text-danger  waves-effect"
+                          data-bs-dismiss="modal">
+                          الغاء
+                      </button>
+                  </div>
+              </div>
+              <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+      </div>
+
+      <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+    </div>
   <div id="open-file" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-lg">
       <div class="modal-content">
@@ -2432,90 +2581,72 @@
     </div>
     <!-- /.modal-dialog -->
   </div>
-  <div id="open-settle" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+  <div id="done-settle" class="modal fade" tabindex="-1" aria-labelledby="bs-example-modal-md" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
       <div class="modal-content">
         <div class="modal-header d-flex align-items-center">
           <h4 class="modal-title" id="myModalLabel">
-            إثبات حالة</h4>
+            إتمام التسوية</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h6>
-            الإسم :
-            <span class="text-muted">ناصر علي محمد المرى ( 649 ) </span>
-          </h6>
-          <h6>
-            الرقم المدنى :
-            <span class="text-muted">275071100845 </span>
-          </h6>
-          <h6>
-            رقم الهاتف :
-            <span class="text-muted">97845338 </span>
-          </h6>
-          <h6>
-            مبلغ المديونية :
-            <span class="text-muted">2,550.000 </span>
-          </h6>
-          <h6>
-            المدفوع :
-            <span class="text-muted"> 595.000 </span>
-          </h6>
-          <h6>
-            المبلغ المتبقى :
-            <span class="text-muted"> 1,955.000</span>
-          </h6>
+          <div class="row">
+            <div class="col-6">
+              <h6 class="mb-3">
+                الإسم :
+                <span class="text-muted">ناصر علي محمد المرى ( 649 ) </span>
+              </h6>
+              <h6 class="mb-3">
+                الرقم المدنى :
+                <span class="text-muted">375071100845 </span>
+              </h6>
+              <h6 class="mb-3">
+                رقم الهاتف :
+                <span class="text-muted">97845338 </span>
+              </h6>
+              <h6 class="mb-3">
+                مبلغ المديونية :
+                <span class="text-muted">3,550.000 </span>
+              </h6>
+            </div>
+            <div class="col-6">
+              <h6 class="mb-3">
+                المدفوع :
+                <span class="text-muted"> 595.000 </span>
+              </h6>
+              <h6 class="mb-3">
+                قيمة القسط الشهرى :
+                <span class="text-muted"> 1,955.000</span>
+              </h6>
+              <h6 class="mb-3">
+                قيمة القسط الاخير :
+                <span class="text-muted"> 1,955.000</span>
+              </h6>
+              <h6 class="mb-3">
+                عدد الأقساط :
+                <span class="text-muted"> 10 </span>
+              </h6>
+            </div>
+          </div>
           <form>
             <div class="form-row flex-wrap d-flex gap-3 p-3 border mt-3">
               <div class="form-group">
-                <label for="amount" class="form-label"> مبلغ التسوية </label>
-                <input type="text" name="amount" id="amount" value="1,955.000" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="first_amount_settle" class="form-label"> مقدم التسوية </label>
+                <label for="first_amount_settle" class="form-label"> المقدم </label>
                 <input type="text" name="first_amount_settle" id="first_amount_settle" class="form-control ">
               </div>
 
               <div class="form-group">
-                <label for="remainder" class="form-label"> المتبقى </label>
-                <input type="text" name="remainder" id="remainder" class="form-control">
+                <label for="uploadFile" class="form-label"> الصورة</label>
+                <input class="form-control" type="file" id="uploadFile">
               </div>
               <div class="form-group">
-                <label for="installment_no" class="form-label"> عدد الاقساط </label>
-                <select class="form-control" name="installment_no" id="installment_no">
-                  <option value=" ">اختار العدد </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
+                <label for="installment_no" class="form-label"> اختار طريقة الدفع </label>
+                <select class="form-control form-select" name="installment_no" id="installment_no">
+                  <option value="1">كاش</option>
+                  <option value="2">فيزا</option>
+                  <option value="3">ايداع</option>
                 </select>
 
-              </div>
-
-              <div class="form-group">
-                <label for="inst_value" class="form-label"> قيمة القسط الشهرى </label>
-                <input type="text" class="form-control" name="inst_value" id="inst_value">
-
-              </div>
-              <div class="form-group">
-                <label for="last_inst_value" class="form-label"> قيمة القسط الاخير </label>
-                <input type="text" class="form-control" name="last_inst_value" id="last_inst_value">
-
-              </div>
-              <div class="form-group">
-                <label for="settle_date" class="form-label"> تاريخ دفع المقدم </label>
-                <input type="date" class="form-control " name="settle_date" id="settle_date">
-              </div>
-              <div class="form-group">
-
-                <label for="action_id" class="form-label"> اختر الاجراء </label>
-                <select class="form-control" name="action[]" id="action_id">
-                  <option value="all">الكل </option>
-                  <option value="3">رفع حجز بنك </option>
-                  <option value="2">رفع حجز راتب </option>
-                  <option value="1">رفع حجز سيارات </option>
-                  <option value="0"> رفع منع سفر </option>
-                </select>
               </div>
             </div>
           </form>
