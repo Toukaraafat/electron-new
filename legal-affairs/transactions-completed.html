@@ -2325,6 +2325,8 @@
                       <th>اسم العميل</th>
                       <th> رقم الهاتف</th>
                       <th>الايميل</th>
+                      <th>طريقة التواصل</th>
+
                       <th> الإجراءات </th>
                     </tr>
                     <!-- end row -->
@@ -2341,6 +2343,9 @@
                       </td>
                       <td>123 9988568</td>
                       <td>touka@gmail.com</td>
+                      <td><h6> واتس اب</h6>
+                      <h6 class="text-info">0112121212332</h6></td>
+
                       <td>
                         <button class="btn btn-success me-6" data-bs-toggle="modal" data-bs-target="#add-one">
                           اضف منجز</button>
@@ -2371,33 +2376,64 @@
           <form>
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label" for="input1"> الإسم/label>
+                <label class="form-label" for="input1"> الإسم</label>
                   <input class="form-control" type="text" id="input1" />
               </div>
               <div class="form-group">
-                <label class="form-label"> المهنة </label>
-                <select class="form-select">
-                  <option value="2">
-                    موظف بنك </option>
-                  <option value="1">
-                    موظف محكمة </option>
+                <label class="form-label">المهنة <span class="text-danger"> *</span></label>
+                <select class="form-select" id="jobSelect" onchange="showAdditionalSelect()">
+                    <option value="">اختر المهنة</option>
+                    <option value="bankEmployee">موظف بنك</option>
+                    <option value="courtEmployee">موظف محكمة</option>
                 </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="input2"> رقم الواتساب او الايميل</label>
-                <input class="form-control" type="text" id="input2" />
-              </div>
-              <div class="form-group">
-                <label class="form-label"> طريقة التواصل</label>
+            </div>
+            
+            <!-- Additional Select for Bank Employee -->
+            <div class="form-group" id="bankSelectContainer" style="display: none;">
+                <label class="form-label">اختر البنك:</label>
                 <select class="form-select">
-                  <option value="3">
-                    واتساب</option>
-                  <option value="2">
-                    الايميل </option>
-                  <option value="1">
-                    رسالة نصية </option>
+                    <option value="credit">البنك</option>
+                    <option value="savings">البنك</option>
                 </select>
-              </div>
+            </div>
+            
+            <!-- Additional Select for Court Employee -->
+            <div class="form-group" id="courtSelectContainer" style="display: none;">
+                <label class="form-label">اختر المحكمة:</label>
+                <select class="form-select">
+                    <option value="civil">المحكمة</option>
+                    <option value="criminal">المحكمة</option>
+                </select>
+            </div>
+            
+         
+             
+            <div class="form-group">
+              <label class="form-label">طريقة التواصل <span class="text-danger"> *</span></label>
+              <select class="form-select" id="contactMethodSelect" onchange="showContactInput()">
+                  <option value="">اختر طريقة التواصل</option>
+                  <option value="whatsapp">واتساب</option>
+                  <option value="email">الايميل</option>
+                  <option value="sms">رسالة نصية</option>
+              </select>
+          </div>
+          
+          <!-- Input fields for each contact method -->
+          <div class="form-group" id="whatsappInputContainer" style="display: none;">
+              <label class="form-label" for="whatsappInput">رقم الواتساب: <span class="text-danger"> *</span></label>
+              <input class="form-control" type="text" id="whatsappInput" />
+          </div>
+          
+          <div class="form-group" id="emailInputContainer" style="display: none;">
+              <label class="form-label" for="emailInput">البريد الإلكتروني: <span class="text-danger"> *</span></label>
+              <input class="form-control" type="email" id="emailInput" />
+          </div>
+          
+          <div class="form-group" id="smsInputContainer" style="display: none;">
+              <label class="form-label" for="smsInput">رقم الهاتف للرسالة النصية: <span class="text-danger"> *</span></label>
+              <input class="form-control" type="text" id="smsInput" />
+          </div>
+          
 
             </div>
           </form>
@@ -2426,6 +2462,45 @@
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
   <script src="../assets/js/datatable/datatable.init.js"></script>
+  <script>
+    function showAdditionalSelect() {
+        const jobSelect = document.getElementById("jobSelect");
+        const bankSelectContainer = document.getElementById("bankSelectContainer");
+        const courtSelectContainer = document.getElementById("courtSelectContainer");
+
+        // Hide both containers initially
+        bankSelectContainer.style.display = 'none';
+        courtSelectContainer.style.display = 'none';
+
+        // Show the relevant container based on selection
+        if (jobSelect.value === "bankEmployee") {
+            bankSelectContainer.style.display = 'block';
+        } else if (jobSelect.value === "courtEmployee") {
+            courtSelectContainer.style.display = 'block';
+        }
+      }
+          function showContactInput() {
+                  const contactSelect = document.getElementById("contactMethodSelect");
+                  const whatsappInputContainer = document.getElementById("whatsappInputContainer");
+                  const emailInputContainer = document.getElementById("emailInputContainer");
+                  const smsInputContainer = document.getElementById("smsInputContainer");
+          
+                  // Hide all input containers initially
+                  whatsappInputContainer.style.display = 'none';
+                  emailInputContainer.style.display = 'none';
+                  smsInputContainer.style.display = 'none';
+          
+                  // Show the relevant input container based on selection
+                  if (contactSelect.value === "whatsapp") {
+                      whatsappInputContainer.style.display = 'block';
+                  } else if (contactSelect.value === "email") {
+                      emailInputContainer.style.display = 'block';
+                  } else if (contactSelect.value === "sms") {
+                      smsInputContainer.style.display = 'block';
+                  }
+              }
+    
+</script>
 </body>
 
 </html>
