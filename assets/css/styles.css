@@ -50062,7 +50062,7 @@ body .apexcharts-tooltip-title {
     z-index: 0;
     display: block;
     position: absolute;
-    right: 0
+    left: 0
 }
 
 .wizard-content .wizard>.steps>ul>li:before {
@@ -50070,7 +50070,7 @@ body .apexcharts-tooltip-title {
     z-index: 0;
     display: block;
     position: absolute;
-    left: 0
+    right: 0
 }
 
 .wizard-content .wizard>.steps>ul>li a {
