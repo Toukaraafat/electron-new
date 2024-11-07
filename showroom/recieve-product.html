@@ -3019,8 +3019,8 @@
                         <td>12</td>
                         <td> 1</td>
                         <td> 1</td>
-                        <td><input type="text" class="form-control"></td>
-                        <td> <div class="form-check py-2"> <label class="form-check-label" for="flexCheckDefault">
+                        <td><input type="text" class="form-control" id="numberInput" placeholder="Enter a number"></td>
+                        `                        <td> <div class="form-check py-2"> <label class="form-check-label" for="flexCheckDefault">
                             Default checkbox
                           </label>
                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -3028,9 +3028,91 @@
                         </div></td>
                        
                       </tr>
+         
     
                     </tbody>
                   </table>
+                  <div id="tableBody"></div>
+         <script>
+          document.getElementById('numberInput').addEventListener('input', function() {
+  var number = parseInt(this.value);  // تحويل الرقم المدخل إلى عدد صحيح
+  var tableBody = document.getElementById('tableBody');  // الجسم الذي سيتم إضافة الصفوف فيه
+
+  // مسح المحتوى السابق
+  tableBody.innerHTML = '';
+
+  // تحقق من صحة الرقم المدخل
+  if (!isNaN(number) && number > 0) {
+    for (var i = 1; i <= number; i++) {
+      // إنشاء صف جديد
+      var row = document.createElement('tr');
+
+      // إضافة خلايا لتسمية الموديل
+      var tdLabel = document.createElement('td');
+      var label = document.createElement('label');
+      label.innerText = 'الموديل ' + i;
+      tdLabel.appendChild(label);
+      row.appendChild(tdLabel);
+
+      // إنشاء الخلايا للراديو بوتون
+      var tdRadio = document.createElement('td');
+      
+      // إنشاء راديو بوتون لسيريال
+      var radioBtn1 = document.createElement('input');
+      radioBtn1.type = 'radio';
+      radioBtn1.name = 'radioOption_' + i;
+      radioBtn1.value = 'option1';
+      radioBtn1.id = 'radioOption1_' + i;
+      tdRadio.appendChild(radioBtn1);
+      tdRadio.appendChild(document.createTextNode(' سيريال '));
+
+      // إنشاء راديو بوتون لباركود
+      var radioBtn2 = document.createElement('input');
+      radioBtn2.type = 'radio';
+      radioBtn2.name = 'radioOption_' + i;
+      radioBtn2.value = 'option2';
+      radioBtn2.id = 'radioOption2_' + i;
+      tdRadio.appendChild(radioBtn2);
+      tdRadio.appendChild(document.createTextNode(' باركود '));
+      row.appendChild(tdRadio);
+
+      // حاوية لإدخال النص بناءً على اختيار الراديو
+      var tdInputContainer = document.createElement('td');
+      var inputContainer = document.createElement('div');
+      inputContainer.id = 'inputContainer_' + i;  // معرّف فريد لكل صف
+      tdInputContainer.appendChild(inputContainer);
+      row.appendChild(tdInputContainer);
+
+      // إضافة الصف إلى الجسم
+      tableBody.appendChild(row);
+
+      // وظيفة لمعالجة تغيير اختيار الراديو
+      function handleRadioChange(event) {
+        var inputContainer = document.getElementById('inputContainer_' + i); // تحديد الحاوية التي تحتوي على المدخل النصي
+        inputContainer.innerHTML = '';  // مسح المدخل النصي القديم إذا كان موجوداً
+
+        // إضافة المدخل النصي المناسب بناءً على الخيار المحدد
+        if (event.target.value === 'option1') {
+          var input1 = document.createElement('input');
+          input1.type = 'text';
+          input1.placeholder = 'السيريال';  // إضافة المدخل النصي للسيريال
+          inputContainer.appendChild(input1);
+        } else if (event.target.value === 'option2') {
+          var input2 = document.createElement('input');
+          input2.type = 'text';
+          input2.placeholder = 'الباركود';  // إضافة المدخل النصي للباركود
+          inputContainer.appendChild(input2);
+        }
+      }
+
+      // إضافة الأحداث لراديو بوتون
+      radioBtn1.addEventListener('change', handleRadioChange);
+      radioBtn2.addEventListener('change', handleRadioChange);
+    }
+  }
+});
+
+         </script>
                 </div>
               </div>
               <div class="modal-footer d-flex ">
@@ -3066,7 +3148,7 @@
           <h6 class="fw-semibold fs-4 mb-2">Theme</h6>
 
           <div class="d-flex flex-row gap-3 customizer-box" role="group">
-            <input type="radio" class="btn-check light-layout" name="theme-layout" id="light-layout"
+            <input type="radio" class="btn-check light-layout" name="theme-layout" id="lightذذ-layout"
               autocomplete="off" />
             <label class="btn p-9 btn-outline-primary" for="light-layout">
               <i class="icon ti ti-brightness-up fs-7 me-2"></i>Light
