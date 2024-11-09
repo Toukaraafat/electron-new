@@ -31,7 +31,12 @@ body {
     height: 75px;
     object-fit: cover;
 }
-
+.dataTables_filter{
+	margin-top: 30px;
+}
+.dataTables_info{
+	margin-bottom: 30px;
+}
 .ti {
     font-family: tabler-icons !important;
     speak: none;
@@ -19392,7 +19397,7 @@ body {
     --bs-dark-border-subtle: #adb5bd;
     --bs-white-rgb: 255, 255, 255;
     --bs-black-rgb: 0, 0, 0;
-    --bs-font-sans-serif: "Noto Kufi Arabic", sans-serif;
+    --bs-font-sans-serif:  "Noto Kufi Arabic", sans-serif;
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     --bs-body-font-family: var(--bs-font-sans-serif);
@@ -19701,7 +19706,7 @@ sup {
 }
 
 a {
-    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    color: blue;
     text-decoration: underline
 }
 
@@ -40115,8 +40120,8 @@ html[data-boxed-layout=boxed] .container-xxl {
 }
 
 .sidebar-nav ul .sidebar-item .sidebar-link .aside-icon {
-    width: 25px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53431,44 +53436,41 @@ body .connect-sorting-content {
 /* .btn-filter {
     width: 18rem;
 } */
-.btn-static {
+.btn-static{
     padding: 9px 27px;
     font-size: 0.9375rem;
     font-weight: 500;
     line-height: 1.5;
     text-align: center;
 }
-
-.card {
+.card{
     padding-inline: 1rem;
 }
-
 /* table{
     text-align: center;
 } */
 input[type="file"] {
-    direction: ltr;
+ direction: ltr;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 10px; 
     height: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(1 15 24 / 20%); 
     border-radius: 10px;
+  }
+  
+  .hidden {
+     display: none; 
 }
-
-::-webkit-scrollbar-thumb {
-    background: rgb(1 15 24 / 20%);
-    border-radius: 10px;
-}
-
-.hidden {
-    display: none;
-}
-
 /* .table th{
     background-color: #f2f7ff;
 } */
