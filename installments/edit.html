@@ -2401,100 +2401,116 @@
                                         <a href="..index.html">الرئيسية</a>
                                     </li>
                                     <li class="breadcrumb-item">
-                                        <a href="#">المنتجات</a>
+                                        <a href="#">نظام الأقساط</a>
                                     </li>
-                                    <li class="breadcrumb-item" aria-current="page"> الفواتير
+                                    <li class="breadcrumb-item" aria-current="page"> تعديل بيانات
                                     </li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
-                    <div class="card mt-4 p-4">
-                        <h5 class="pb-3">الفواتير</h5>
-                        <div class="form-rows row align-items-end justify-content-center">
-                            <div class="form-group col-md-3">
-                                <label for="monthSelect" class="form-label">المستلم </label>
-                                <select class="form-control form-select" id="monthSelect">
-                                    <option value="2024-09">تقى</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="durationSelect" class="form-label"> الفرع</label>
-                                <select class="form-control form-select" id="durationSelect">
-                                    <option value="3"> شئون قانونية</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="image" class="form-label"> الصورة</label>
-                                <input type="file" class="form-control" id="image" accept="image/*">
-                            </div>
-                            <div class="form-group col-md-3">
 
-                                <button type="submit" class="btn btn-primary w-100 rounded-2">نقل</button>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card">
                         <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
-                            <h4 class="card-title mb-0"> عدد المنتجات ( )
+                            <h4 class="card-title mb-0"> تعديل بيانات عميل
                             </h4>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive pb-4">
-                                <table id="all"
-                                    class="table table-bordered table-striped border text-nowrap align-middle">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th>#</th>
-                                            <th>الموديل</th>
-                                            <th>التفاصيل</th>
-                                            <th>الكود</th>
-                                            <th>الباركود</th>
-                                            <th>حذف</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>الموديل 1</td>
-                                            <td>تفاصيل المنتج 1</td>
-                                            <td>كود 12345</td>
-                                            <td>باركود 98765</td>
-                                            <td>            <a href="javascript:void(0)" class="text-dark delete ms-2">
-                                                <i class="ti ti-trash fs-5"></i>
-                                              </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>الموديل 2</td>
-                                            <td>تفاصيل المنتج 2</td>
-                                            <td>كود 54321</td>
-                                            <td>باركود 56789</td>
-                                            <td> <a href="javascript:void(0)" class="text-dark delete ms-2">
-                                                    <i class="ti ti-trash fs-5"></i>
-                                                </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>الموديل 3</td>
-                                            <td>تفاصيل المنتج 3</td>
-                                            <td>كود 67890</td>
-                                            <td>باركود 12345</td>
-                                            <td> <a href="javascript:void(0)" class="text-dark delete ms-2">
-                                                    <i class="ti ti-trash fs-5"></i>
-                                                </a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <form>
+                                <div class="form-row row">
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="debtStatement" class="form-label">اقرار الدين</label>
+                                        <input type="file" class="form-control" id="debtStatement">
+                                    </div>
 
-                            </div>
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="salaryCertificate" class="form-label">صورة شهادة الراتب</label>
+                                        <input type="file" class="form-control" id="salaryCertificate">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="civilIdFront" class="form-label">صورة البطاقة المدنية وجه</label>
+                                        <input type="file" class="form-control" id="civilIdFront">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="civilIdBack" class="form-label">صورة البطاقة المدنية ظهر</label>
+                                        <input type="file" class="form-control" id="civilIdBack">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="assignmentInquiry" class="form-label">صورة إستعلام اساينيت</label>
+                                        <input type="file" class="form-control" id="assignmentInquiry">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="workId" class="form-label">صورة هوية العمل</label>
+                                        <input type="file" class="form-control" id="workId">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="myId" class="form-label">هويتى</label>
+                                        <input type="file" class="form-control" id="myId">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="firstContract" class="form-label">صورة العقد الاول</label>
+                                        <input type="file" class="form-control" id="firstContract">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="secondContract" class="form-label">صورة العقد الثانى</label>
+                                        <input type="file" class="form-control" id="secondContract">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="saintContract1" class="form-label">عقد الساينت 1</label>
+                                        <input type="file" class="form-control" id="saintContract1">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="saintContract2" class="form-label">عقد الساينت 2</label>
+                                        <input type="file" class="form-control" id="saintContract2">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="productReceipt" class="form-label">استلام المنتجات</label>
+                                        <input type="file" class="form-control" id="productReceipt">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="civilImage" class="form-label">صورة المدنية</label>
+                                        <input type="file" class="form-control" id="civilImage">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="guarantorReceipt" class="form-label">وصل امانة الكفيل</label>
+                                        <input type="file" class="form-control" id="guarantorReceipt">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="legalInquiry" class="form-label">الاستعلام القضائى</label>
+                                        <input type="file" class="form-control" id="legalInquiry">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="deductionCertificate" class="form-label">شهادة الاستقطاع</label>
+                                        <input type="file" class="form-control" id="deductionCertificate">
+                                    </div>
+
+                                    <div class="form-group mb-3 col-md-4 col-sm-6">
+                                        <label for="deductionFee" class="form-label">رسوم الاستقطاع</label>
+                                        <input type="file" class="form-control" id="deductionFee">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">إرسال</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
+
 
     </div>
     <script src="../assets/js/vendor.min.js"></script>

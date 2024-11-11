@@ -2401,100 +2401,77 @@
                                         <a href="..index.html">الرئيسية</a>
                                     </li>
                                     <li class="breadcrumb-item">
-                                        <a href="#">المنتجات</a>
+                                        <a href="#">نظام الأقساط</a>
                                     </li>
-                                    <li class="breadcrumb-item" aria-current="page"> الفواتير
+                                    <li class="breadcrumb-item" aria-current="page"> تعديل بيانات
                                     </li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
-                    <div class="card mt-4 p-4">
-                        <h5 class="pb-3">الفواتير</h5>
-                        <div class="form-rows row align-items-end justify-content-center">
-                            <div class="form-group col-md-3">
-                                <label for="monthSelect" class="form-label">المستلم </label>
-                                <select class="form-control form-select" id="monthSelect">
-                                    <option value="2024-09">تقى</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="durationSelect" class="form-label"> الفرع</label>
-                                <select class="form-control form-select" id="durationSelect">
-                                    <option value="3"> شئون قانونية</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="image" class="form-label"> الصورة</label>
-                                <input type="file" class="form-control" id="image" accept="image/*">
-                            </div>
-                            <div class="form-group col-md-3">
 
-                                <button type="submit" class="btn btn-primary w-100 rounded-2">نقل</button>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card">
                         <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
-                            <h4 class="card-title mb-0"> عدد المنتجات ( )
+                            <h4 class="card-title mb-0"> تعديل بيانات عميل
                             </h4>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive pb-4">
-                                <table id="all"
-                                    class="table table-bordered table-striped border text-nowrap align-middle">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th>#</th>
-                                            <th>الموديل</th>
-                                            <th>التفاصيل</th>
-                                            <th>الكود</th>
-                                            <th>الباركود</th>
-                                            <th>حذف</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>الموديل 1</td>
-                                            <td>تفاصيل المنتج 1</td>
-                                            <td>كود 12345</td>
-                                            <td>باركود 98765</td>
-                                            <td>            <a href="javascript:void(0)" class="text-dark delete ms-2">
-                                                <i class="ti ti-trash fs-5"></i>
-                                              </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>الموديل 2</td>
-                                            <td>تفاصيل المنتج 2</td>
-                                            <td>كود 54321</td>
-                                            <td>باركود 56789</td>
-                                            <td> <a href="javascript:void(0)" class="text-dark delete ms-2">
-                                                    <i class="ti ti-trash fs-5"></i>
-                                                </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>الموديل 3</td>
-                                            <td>تفاصيل المنتج 3</td>
-                                            <td>كود 67890</td>
-                                            <td>باركود 12345</td>
-                                            <td> <a href="javascript:void(0)" class="text-dark delete ms-2">
-                                                    <i class="ti ti-trash fs-5"></i>
-                                                </a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
+                            <form>
+                                <div class="form-row row">
+                                  <!-- Contract Image 1 with Print Button -->
+                                  <div class="form-group mb-3 col-md-6">
+                                    <label for="contractImage1" class="form-label">صورة العقد (1)</label>
+                                    <div class="d-flex align-items-center">
+                                      <input type="file" class="form-control" id="contractImage1">
+                                      <button type="button" class="btn btn-secondary me-3">طباعة </button>
+                                    </div>
+                                  </div>
+                            
+                                  <!-- Contract Image 2 -->
+                                  <div class="form-group mb-3 col-md-6">
+                                    <label for="contractImage2" class="form-label">صورة العقد (2)</label>
+                                    <input type="file" class="form-control" id="contractImage2">
+                                  </div>
+                            
+                                  <!-- Saint Contract Image 1 with Print Button -->
+                                  <div class="form-group mb-3 col-md-6">
+                                    <label for="saintContractImage1" class="form-label">صورة عقد الساينت (1)</label>
+                                    <div class="d-flex align-items-center">
+                                      <input type="file" class="form-control" id="saintContractImage1">
+                                      <button type="button" class="btn btn-secondary me-3">طباعة  </button>
+                                    </div>
+                                  </div>
+                            
+                                  <!-- Saint Contract Image 2 -->
+                                  <div class="form-group mb-3 col-md-6">
+                                    <label for="saintContractImage2" class="form-label">صورة عقد الساينت (2)</label>
+                                    <input type="file" class="form-control" id="saintContractImage2">
+                                  </div>
+                            
+                                  <!-- Product Receipt Image with Print Button -->
+                                  <div class="form-group mb-3 col-md-6">
+                                    <label for="productReceiptImage" class="form-label">صورة استلام المنتجات</label>
+                                    <div class="d-flex align-items-center">
+                                      <input type="file" class="form-control" id="productReceiptImage">
+                                      <button type="button" class="btn btn-secondary me-3 ">طباعة  </button>
+                                    </div>
+                                  </div>
+                            
+                                  <!-- Debt Statement Image -->
+                                  <div class="form-group mb-3 col-md-6">
+                                    <label for="debtStatementImage" class="form-label">صورة اقرار الدين</label>
+                                    <input type="file" class="form-control" id="debtStatementImage">
+                                  </div>
+                                </div>
+                            
+                                <button type="submit" class="btn btn-primary">إرسال</button>
+                              </form>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
+
 
     </div>
     <script src="../assets/js/vendor.min.js"></script>
